@@ -1,0 +1,47 @@
+.content {
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 70%;
+  padding: 30px;
+  background: white;
+}
+
+h3 {
+  padding-bottom: 20px;
+}
+
+.right-section {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  padding-top: 0px;
+  background: rgb(216, 215, 215);
+  height: 250px;
+}
+
+.left-section {
+  text-align: left;
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+}
+h5 {
+  text-align: left;
+  margin-top: 25px;
+}
+
+#totPrice {
+  color: rgb(177, 20, 20);
+  font-size: 25px;
+}
+
+.topDetail {
+  border: solid 5px rgb(216, 215, 215);
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+
+.topDetail span {
+  padding-right: 20px;
+}

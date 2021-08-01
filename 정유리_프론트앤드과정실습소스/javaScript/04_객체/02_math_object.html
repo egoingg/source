@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Math Object</title>
+  <style>
+   body { background:tan; }
+   div { width:500px; padding:50px; margin:100px auto; background:#fdd5b3;
+   text-align:center; }
+	h3{}
+  </style>
+ </head>
+ <body>
+	<div>
+		<script>
+			var nn = Math.random();
+			var num = nn * 100;
+			document.write("<h3>랜덤 숫자: </h3> " + nn );
+			document.write("<h3>랜덤 숫자 * 100: </h3> " + num + "<hr>" );
+			document.write("<h3>반올림(소수점 첫째자리에서)</h3> " + Math.round(num));
+			document.write("<h3>올림(소수점 첫째자리에서)</h3> " + Math.ceil(num));
+			document.write("<h3>내림(소수점 첫째자리에서)</h3> " + Math.floor(num));
+			document.write("<h3>소수점 세번째 자리까지 표시 <br>(소수점 넷째 자리에서 반올림 되어짐)</h3> " + num.toFixed(3));
+			document.write("<h3>숫자 3자리만 보이게 반올림</h3> " + num.toPrecision(3));
+
+		</script>
+	</div>
+	
+ </body>
+</html>

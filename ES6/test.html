@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // function 가장작은값(a,b,c) {
+        //    // console.log(Math.min(a,b,c))
+
+        //    let curr = 0;
+        //    let pre = arguments[0];
+
+        //    for(let i = 0; i < arguments.length; i++)
+        //    {
+        //      curr = arguments[i]
+        //      if (curr < pre)
+        //         pre = curr
+        //    }
+
+        //    return pre;
+        // }
+
+        // console.log(가장작은값(6,5,11))
+
+        
+        // function 삼각형이되나(a,b,c) {
+        //    // console.log(Math.min(a,b,c))
+
+        //    let curr = 0;
+        //    let pre = 0;
+        //    var sum =0;
+        //    var res ='no'
+
+        //    for(let i = 0; i < arguments.length; i++)
+        //    {
+        //         curr = arguments[i]
+        //         if (curr > pre)
+        //         {
+        //             sum += pre;
+        //             pre = curr
+        //         }
+        //         else{
+        //             sum += curr
+        //         }
+               
+        //    }
+
+        //    let 제일큰값 = pre
+
+        //    if (sum > 제일큰값)
+        //         res ='yes'
+
+        //     console.log(sum, pre)
+
+        //    return res
+        // }
+
+        // console.log(삼각형이되나(6,7,11))
+        // console.log(삼각형이되나(13,33,17))
+
+        // function 연필다스(n) {
+        //     let 몇다스 = Math.ceil(n / 12)
+        //     return 몇다스
+        // }
+        // console.log(연필다스(100))
+
+        // function n까지합(num) {
+        //     let sum=0;
+
+        //     for (let i = 1; i <= num; i++) {
+        //        sum += i
+              
+        //     }
+
+        //     return sum
+        // }
+        // console.log(n까지합(3))
+
+
+        // function 최소값구하기(arr) {
+        //     let answer
+        //     let pre =Number.MAX_SAFE_INTEGER
+
+        //     arr.forEach(curr => {
+        //         if (curr < pre)
+        //            pre = curr
+        //     });
+
+        //     answer = pre
+        //     return answer
+        // }
+
+        // let arr = [5,7,1,3,2,9,11]
+        // console.log(최소값구하기(arr))
+
+
+        // console.log('배열의최소값',Math.min(...arr))
+
+
+//홀수의합
+//가장작은값
+
+        
+        // function 홀수의합(arr) {
+        //     let sum =0
+        //     let pre = Number.MAX_SAFE_INTEGER
+            
+        //     arr.forEach(curr => {
+        //         if (curr % 2 === 1) //홀수이면
+        //         {
+        //            sum  += curr //홀수의합
+
+        //            if (curr < pre) 
+        //             {
+        //                 pre = curr //작은값
+        //             }
+        //         }
+
+              
+
+        //     });
+
+           
+        //     console.log('가장작은값',pre)
+        //     console.log('홀수의합', sum)
+        // }
+
+        // let arr = [12,77,38,41,53,92,85]
+        // 홀수의합(arr)
+
+            // function 십부제(day, arr) {
+            //     위반arr = []
+            //     arr.forEach(val => {
+            //         if (val % 10 === day) //10으로 나눈 나머지가 3인것은 위반
+            //         위반arr.push(val) 
+            //     });
+
+            //     return 위반arr
+                
+            // }
+
+            // arr = [25, 23, 11, 47, 53, 17, 33]
+
+            
+            // console.log('위반차량:',십부제(3, arr))
+
+
+        // function 가짜난쟁이(arr) {
+        //     let answer
+        //     let sum =arr.reduce( (prev, curr) => prev + curr );
+
+        //     for (let i = 0; i < arr.length; i++) {
+        //         const a = arr[i];
+        //         for (let j = i+1; j < arr.length; j++) {
+                    
+        //             const b = arr[j];
+
+        //             if (sum -a - b === 100 )
+        //             {
+        //                 console.log(a, b, sum)
+        //                 arr.splice(j,1)
+        //                 arr.splice(i,1)
+
+        //                 return arr
+        //             }
+        //         }
+                    
+        //     }
+        //    // return answer
+        // }
+
+        // let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13] 
+     
+        // console.log(가짜난쟁이(arr))
+
+   
+
+   // let { body:{height:키, weight:몸무게}, size: [상의사이즈,하의사이즈] }
+                                                                            // = 신체정보 = {
+
+                                                                            //                 body: {
+                                                                            //                     height: 190,
+                                                                            //                     weight: 70
+                                                                            //                 },
+                                                                            //                 size: ["상의 Large", "바지 30인치"],
+                                                                            //                 };
+
+
+    // let obj = {키:160, 몸무게:50, 상의사이즈:90, 하의사이즈:32, func: function a(params) {
+    //     console.log('func')
+    // }}
+
+
+    // for (const key in obj) {
+    //     if (Object.hasOwnProperty.call(obj, key)) {
+    //         const val = obj[key];
+          
+    //         console.log(key, val)
+    //     }
+    // }      
+
+    // let aa = [...'abcdefg']
+    // for (const val of [...'abcdefg']) {
+    //     console.log(val)
+    // }
+    
+    // for (const val of [2,3,4,5,6,7,8,9]) {
+    //     for (const n of [1,2,3,4,5,6,7,8,9]) {
+    //         let res = val * n
+    //         console.log(` ${val} x ${n} = ${res}`)
+    //     }
+    // }
+
+    // let str = 'BANANA';
+    //    console.log(str.replace(/A/g,'#'))
+
+
+
+    // for (const val of 'BANANA') {
+    //     if (val === 'A')
+    //         str = '#'
+    //     else
+    //         str = val
+
+    //     res+=str
+
+    // }
+    // console.log(res)
+
+    // function solution(s, t) {
+    //     let answer =0
+
+        
+    //     for (const x of s) {
+    //        x === t && answer++
+    //     }
+
+
+    //     return answer
+    // }
+
+    // let str ='COMPUTERPROGRAMMING'
+    // console.log(solution(str, 'R'))
+
+
+    // function solution(s, t) {
+    //     let answer =0
+
+    //     //split - string -> 배열로
+    //    let arr = s.split(t)
+    //    console.log(arr)
+    //    answer = arr.length -1
+
+    //     return answer
+    // }
+
+    // let str ='KoreaTimeCode'
+    // console.log(solution(str, 'R'))
+
+    // function solution(s) {
+    //     let answer =''
+
+    //    for (var val of s) {
+    //        if ( 122 >= val.charCodeAt() && val.charCodeAt() >= 97)
+    //            answer += String.fromCharCode(val.charCodeAt()- 32)
+    //        else
+    //            answer+= val
+    //    }
+
+       
+    //     return answer
+    // }
+
+    // let str ='KoreaTimeCode'
+    // console.log(solution(str))
+
+    
+    // function solution(s) {
+    //     let answer =''
+    //     let preL = Number.MIN_SAFE_INTEGER;
+
+    //     for (const val of s) {
+    //         if (preL < val.length){
+    //             preL = val.length
+    //            answer = val
+    //         }
+    //     }
+
+       
+    //     return answer
+    // }
+
+    // let str =['teacher','time','student','beautiful','good']
+    // console.log(solution(str))
+
+    // function solution(s) {
+    //     let answer =''
+        
+    //     let len = s.length
+    //     let 몫 = len / 2
+
+    //     if (len % 2 ===0)
+    //         answer = s.substring(몫-1, 몫+1)
+    //     else
+    //         answer = s.substring(몫, 몫+1)
+       
+    //     return answer
+    // }
+
+    // let str ='kororld'
+    // console.log(solution(str))
+
+   
+
+//     let tmp = new Set('ksekkset')
+//     console.log(tmp.values())
+   
+
+
+//    function solution(s) {
+//         let answer =''
+        
+//         let a = [...s]
+
+//         let b = {}
+        
+//         for (const val of s) {
+//            // let n =a.indexOf(val)
+//             if (!b[val])
+//             {
+//                 b[val] = 1
+//                 answer += val
+//             }
+            
+
+//         }
+//        console.log(b)
+//         return answer
+//     }
+
+
+//     let str ='ksekkset'
+//     console.log(solution(str))
+
+
+function solution(s) {
+        let answer = []
+        
+      for (let i = 0; i < s.length; i++) {
+          console.log(s[i],i,  s.indexOf(s[i]))
+          
+          if (i === s.indexOf(s[i]))
+          answer.push(s[i])
+      }
+
+
+        return answer
+    }
+
+
+    // let str =['teacher','time','good','time','good']
+    // console.log(solution(str))
+
+
+
+    // function solution(s) {
+    //     let answer = []
+     
+
+    //     answer = new Set(s)
+
+    //     return answer
+    // }
+
+
+    // let str =['teacher','time','good','time','good']
+    // console.log([...solution(str)])
+
+    
+
+    // function solution(s) {
+    //     let answer = []
+    //     let pre = Number.MIN_SAFE_INTEGER
+     
+
+    //     s.map((x)=>{
+    //         if (x > pre) 
+    //         { 
+    //             pre = x
+    //             answer.push(x)
+    //         }
+
+          
+    //     })
+
+     
+    //     return answer
+    // }
+
+
+    // let str =[130,135,148,140,145,150,150,153]
+    // console.log(solution(str))
+
+
+    // function solution(a,b) {
+    //     let answer =''
+
+    //     for (let i = 0; i < a.length; i++) {
+    //         if (a[i] === b[i]) answer+= 'D'
+    //         else if (a[i]=== 1 && b[i]===3) answer+= 'A'
+    //         else if (a[i] === 2 && b[i]===1) answer+= 'A'
+    //         else if (a[i]===3 && b[i]===2) answer+= 'A'
+    //         else  answer+= 'B'
+                
+    //     }
+
+   
+
+    //     return answer
+    // }
+
+
+    // let a =[2,3,3,1,3]
+    // let b =[1,1,2,2,3]
+    // console.log(solution(a,b))
+
+    // function solution(a) {
+    //     let answer =0
+    //     let cnt =0
+    //    // [1,0,1,1,1,0,0,1,1,0]
+       
+
+    //     for (let i = 0; i < a.length; i++) {
+    //         cnt += a[i]
+    //         if (a[i] > 0) 
+    //         {
+                
+    //             answer+= cnt
+    //         }
+    //         else 
+    //             cnt =0
+                
+    //     }
+
+    //     return answer
+    // }
+
+    // let a =[1,0,2,1,1,0,0,1,1,0]
+    // console.log(solution(a))
+//-------------------
+
+
+// function 첫째함수(콜백){
+//   console.log(1);
+//   콜백();
+// }
+
+// function 둘째함수(){
+//   console.log(2)
+// }
+
+// 첫째함수(둘째함수);
+
+// //---
+
+// 첫째함수(function(){
+//   console.log(2)
+// })
+
+// function solution(a) {
+//     let answer =0
+//     let score = []
+
+//     Array.from({length:a.length},()=>1)
+
+//     for (let i = 0; i < a.length; i++) {
+//         let cnt=1
+//        for (let j = 0; j < a.length; j++) {
+           
+//         if (a[i] < a[j])
+//            cnt++
+//        }
+
+//        score.push(cnt)
+//     }
+
+  
+    
+
+    
+
+//     return score
+// }
+
+// let a =[92,92,92,100,76]
+// console.log(solution(a))
+
+// function solution(a) {
+//     let answer
+//     let score = []
+
+//     let aa = [...a]
+
+//    answer = a.sort((a,b)=>b-a)
+//    console.log(answer, aa)
+//    let n =0
+
+   
+//     for (let j=0 ; j < aa.length;j++) {
+       
+
+//        let id =  answer.indexOf(aa[j])
+//        score.push(id+1)
+
+     
+//     }
+   
+    
+
+//     return score
+// }
+
+// let a =[82,82,82,100,76]
+// console.log(solution(a))
+
+
+// function solution(a) {
+//     let answer = []
+//     let 행합= 열합 = 0
+    
+//     let len = a.length
+
+//     let arrN = []
+
+//     for (let i = 0; i < len; i++) {
+//         행합=0
+//         열합=0
+//         for (let j = 0; j < len; j++) {
+//             열합+= arr[i][j]//arr[행, 열]
+//             행합+= arr[j][i]
+//         }
+//         answer.push(열합)
+//         answer.push(행합)
+//       //      arrN.push(열합)
+//     }
+
+//     행합=0
+//     열합=0
+
+//     for (let i = 0; i < len; i++) {
+//         행합 += arr[i][i]
+//         열합 += arr[i][len - i - 1] 
+//     }
+    
+//     answer.push(열합)
+//     answer.push(행합)
+
+//     return Math.max(...answer)
+// }
+
+// let arr=[[10, 13, 10, 12, 15], 
+//          [12, 39, 30, 23, 11],
+//          [11, 25, 50, 53, 15],
+//          [19, 27, 29, 37, 27],
+//          [19, 13, 30, 13, 19]];
+
+// console.log(solution(arr))      
+
+// function solution(arr) {
+//     let answer = []
+//     let 행합= 열합 = 0
+    
+//     let len = arr.length
+
+//     let arrN = []
+
+//     let max = true
+//     let val =0
+//     for (let i = 0; i < len; i++) {
+//         행합=0
+//         열합=0
+
+//         max = true
+
+//         for (let j = 0; j < len; j++) {
+//              val = arr[i][j]//arr[행, 열]   
+        
+//              if (i !== 0) {
+//                 if (val < arr[i-1][j] ) //위
+//                     {max = false}
+//              }
+
+//             if (i !== 4){
+//                 if (val < arr[i+1][j] )//아래
+//                 {max = false}
+//             }
+
+//             if (j !== 0) {
+//             if (val < arr[i][j-1] )//왼
+//               { max = false}
+//             }
+
+//             if (j !== 4){
+//                  if (val < arr[i][j+1] )//오
+//                 { max = false}
+//             }
+
+//             max && arrN.push(val)
+
+//             max = true
+//         }
+        
+       
+//     }
+
+//     return arrN
+// }
+
+
+// let arr=[[5, 3, 7, 2, 3], 
+//         [3, 7, 1, 6, 1],
+//         [7, 2, 5, 3, 4],
+//         [4, 3, 6, 4, 1],
+//         [8, 7, 3, 5, 2]];
+
+// console.log(solution(arr))   
+
+// function solution(arr) {
+//     let answer = []
+//     let 행합= 열합 = 0
+    
+//     let len = arr.length
+
+//     let arrN = []
+
+//     let max = true
+//     let val =0
+
+//     let dx = [-1,0,1,0]
+//     let dy = [0,1,0,-1]
+//     let tar =0;
+
+//     for (let i = 0; i < len; i++) {
+//         max = true
+//         for (let j = 0; j < len; j++) {
+//              val = arr[i][j]//arr[행, 열]   
+
+//              for(let k =0; k < 4; k++){
+                 
+//                 let x = i + dx[k]
+//                 let y = j + dy[k]
+
+//                 if (x >=0 && y >=0 && x < 5 &&  y < 5)
+//                 {
+//                     console.log(x,y, arr[x][y])
+//                     if (val <= arr[x][y])
+//                         max = false
+//                 }
+//              }
+        
+//             max && arrN.push(val)
+
+//             max = true
+//         }
+        
+       
+//     }
+
+//     return arrN
+// }
+
+
+// let arr=[[5, 3, 7, 2, 3], 
+//         [3, 7, 1, 6, 1],
+//         [7, 2, 5, 3, 4],
+//         [4, 3, 6, 4, 1],
+//         [8, 7, 3, 5, 2]];
+
+// console.log(solution(arr))   
+
+
+// function solution(s) {
+//     let answer=''
+
+//     let arr = [...s]
+
+//     let n = arr.length
+//     let res = false
+
+//     for (let i =n-1; i > -1; i--) {
+//         answer+=arr[i]
+//     }
+
+//     //console.log(arr.reverse().join(''))
+
+
+//     if (s.toLowerCase() == answer.toLowerCase())
+//         res = true
+
+//     return res
+// }
+
+// let s ='gooG'
+// console.log(solution(s)) 
+
+
+// function solution(s) {
+//     let answer=''
+
+//     let arr = [...s.toLowerCase()]
+
+//     let n = arr.length
+//     let res = false
+
+//     for (let i =0; i < Math.floor(n/2); i++) {
+//         //비교
+//         if (arr[i] !== arr[n-i-1])
+//         return false
+//     }
+
+//     return true
+// }
+
+// let s ='gooG'
+// console.log(solution(s)) 
+
+
+// function solution(s) {
+//     let answer=''
+//     // 알패벳외글자없애기..replace
+//     //혀재글자와 reverse했을때 ㅁㄴ자 같은지 비교
+
+
+//     let str = s.toLowerCase().replace( /[^a-z]/g,'')
+    
+//     if (str != [...str].reverse().join(''))
+//     return false
+
+//     return true
+// }
+
+// let s="found7, time: study; Yduts; emit, 7Dnuof";
+// console.log(solution(s)) 
+
+
+// function solution(str,e) {
+//     let answer=[]
+ 
+//     let p =1000
+    
+
+//     for (const val of str) {
+//         if(val===e){
+//             p = 0
+//         }
+//         else
+//         {
+//             p++
+//         }
+
+//         answer.push(p)
+//     }
+
+//     p = 1000
+
+//     for (let i = str.length -1; i>=0;i--) {
+//         if(str[i]===e){
+//             p = 0
+//             answer[i] = 0
+//         }
+//         else
+//         {
+//             p++
+//             if (answer[i] > p)
+//              answer[i] = p
+//         }
+//     }
+   
+//     return answer
+// }
+
+// let str="teachermode";
+// console.log(solution(str, 'e'));
+
+function solution(str) {
+    let answer=''
+ 
+    let p =0
+    let pre = '';
+
+    for (const val of str) {
+        if(val===pre){
+            p++
+        }
+        else
+        {
+            if (p > 1) answer+= p
+
+            answer+= val
+            p=1
+
+          
+        }
+
+        pre = val
+
+    }
+
+    return answer
+}
+
+let str="KKHSSSSSSSE";
+console.log(solution(str));
+
+</script>
+</body>
+</html>

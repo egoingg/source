@@ -1,0 +1,13 @@
+.container_CurrentPrd {
+  background: tan;
+  border-radius: 5px;
+  width: 200px;
+  opacity: 0.7;
+
+  position: absolute;
+  right: 10px;
+  top: 45%;
+}
+.container_CurrentPrd div {
+  border-bottom: 1px solid gray;
+}

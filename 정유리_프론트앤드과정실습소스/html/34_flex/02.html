@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>flex</title>
+ </head>
+ <style>
+  .wrap{
+	display:-webkit-flex;
+	display:-ms-flex;
+	display:flex;
+
+	width:90%; height:300px; margin:20px auto; background:#dfdfdf; border:5px solid #999;
+	}
+  .w1{ }
+  .w2{ flex-direction:column;}
+  /*
+  flex-direction:row; 기본
+  flex-direction:column; -세로 배치 (플렉스 요소에 flex 속성을 설정할 경우먼)
+ */
+  .wrap div{}
+  .wrap div:first-child{ flex:1; background:tan;} /* 비율로 나누기 1:2:3 */
+  .wrap div:nth-child(2){ flex:2; background:plum;}
+  .wrap div:nth-child(3){ flex:3; background:gold;}
+ </style>
+ <body>
+ <div class="wrap w1">
+	<div>BOX1</div>
+	<div>BOX2</div>
+	<div>BOX3</div>
+ </div>
+
+  <div class="wrap w2">
+	<div>BOX1</div>
+	<div>BOX2</div>
+	<div>BOX3</div>
+ </div>
+
+ </body>
+</html>

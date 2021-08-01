@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>동위(형제선택자)/상태 선택자</title>
+  <style>
+   h1 ~ ul{color:red}/*동위(형제선택자)-h1뒤에 나오는 같은  depth(형제관계)의 모든 ul*/
+
+   h1 + ul{color:orange}/*동위(형제선택자)-h1뒤에 나오는 같은  depth(형제관계)중 첫번째로 바로 뒤에 나오는 ul*/
+   input + div{border:2px solid yellow}/*input 바로 뒤에 나오는 div(같은 depth에 있는)*/
+
+
+   input{background:#ff6666; border:1px solid gray; height:50px}
+   /*상태 선택자*/
+   input:focus{background:#99ff33;}
+   input[type="checkbox"]:checked + div{border:2px dotted green;}
+
+
+   #mm {display:none;} /*체크박스 안보이게, 숨기면(display:none) 공간도 사라짐*/
+   #mm ~ div{visibility:hidden; width:200px; height:200px; background:#cccccc;} /*숨겨도(visibility:hidden) div의 공간은 유지됨*/
+   #mm:checked ~ div{visibility:visible;} /*체크박스 뒤에 있던 div가 보이게*/
+
+/*display :none		차지하고 있는 공간도 사라짐
+ visibility:hidden 차지하고 있는 공간은 유지되면시 사라딤
+*/
+ </style>
+ </head>
+ <body>
+ <h1>여행 준비물 챙기기</h1>
+ <div>
+	<h1>정리 목록</h1>
+	 <ul>
+		<li>비상식량
+			<ul>
+				<li>사탕</li>
+				<li>초코렛</li>
+				<li>라면</li>
+				<li>생수</li>
+			</ul>
+		</li>
+		<li>옷
+			<ul>
+				<li>겉옷
+					<ul>
+						<li>야상</li>
+						<li>패딩</li>
+						<li>점퍼</li>
+					</ul>		
+				</li>
+				<li>하의</li>
+				<li>상의</li>
+				<li>속옷</li>
+			</ul>		
+		</li>
+		<li>기타</li>
+	 </ul>
+ </div>
+
+
+ <input type="text">
+ <input type="password">
+ <input type="tel"><br>
+
+ <input type="checkbox">
+ <div>체크박스 바로 뒤의 div입니다</div>
+ <ul>
+	<li>오늘은</li>
+	<li>2월 5일 </li>
+	<li>금요일 입니다.</li>
+ </ul>
+
+ <hr>
+ <input type="checkbox" id="mm"><label for="mm">메모장보기</label>
+ <div>메모장임다</div>
+ </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>변수(숫자형,문자형) /논리형</title>
+
+ </head>
+ <body>
+ <h2>string & number</h2>
+  <script>
+   var aa, bb; //변수(어떤 정보를 임시로 저장)선언
+
+   aa = 50;		//변수 aa안에 50을 넣어줌 - 숫자형
+   bb = "50";	//변수 aa안에 50을 넣어줌 - 숫자형
+   bb = Number("50"); //숫자형으로 변환
+
+   document.write(aa+bb); //bb가 문자형이라 덧셈이 되지 않는디
+  </script>
+  <hr>
+  <h2>Boolean</h2>
+  <script>
+
+  var a , b;
+  a = 10 > 5; //true
+  b = 10 > 20; //fale
+
+  document.write(a + "<br>");
+  document.write(b);
+
+  </script>
+  <hr>
+  <h2>null & undefined</h2>
+  <script>
+  var c;
+  document.write(c + "\n  변수 선언만함 <br>"); // undefine - 변수 선언만함 
+  
+  c = "hello";//string 형은 따옴표로 묶어야함
+  document.write(c + "\n string 형은 따옴표로 묶어야함<br>");
+
+  c=null; //null - 변수에 저장된 데이터를 비우고자 할때 
+  document.write(c + "\n  변수에 저장된 데이터를 비우고자 할때 <br>"); 
+  </script>
+ </body>
+</html>

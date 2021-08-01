@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/* 기본 set */
+*{ margin:0; padding:0; }
+li { list-style:none; }
+img { border:0; }
+a { text-decoration:none; }
+body { font-family:'맑은 고딕','돋움','sans-serif'; font-size:13px; }
+
+section{ height:951px;border:2px solid red;
+		 background-position:center top; 
+		 background-repeat:no-repeat; 
+		 background-attachment:fixed/**/
+		}
+section .con{ width:960px; border:2px solid blue;
+			  margin:0 auto;  
+			  overflow:hidden}
+
+section .con .txt{ width:450px;  border:2px solid yellow;
+					text-align:center; 
+					padding-top:40px}
+
+section .con .txt h2{ margin-bottom:20px }
+section .con .txt .product{ margin-top:45px }
+
+
+#section2 .con .txt,
+#section4 .con .txt,
+#section5 .con .txt{ float:right}
+
+
+
+#section1{ background-image:url('../images/product1_bg.jpg'); }
+
+#section2{ background-image:url('../images/product2_bg.jpg');}
+
+#section3{ background-image:url('../images/product3_bg.jpg');}
+
+#section4{ background-image:url('../images/product4_bg.jpg');}
+
+#section5{ background-image:url('../images/product5_bg.jpg');}

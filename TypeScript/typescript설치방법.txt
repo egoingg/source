@@ -1,0 +1,20 @@
+typescript 설치
+---npm install -g typescript
+
+
+tsc main.ts ---> js파일을 만들어줌
+
+ts-node(컴파일러) 설치
+---npm install -g ts-node
+ts코드를 js로 변환해서 node에서 실해을 한번에 할수 있음
+
+
+--터미널에서 실행 결과 확인 --
+ts 파일 실행 명령어: ts-node main.ts
+
+--브라우저에서 실행 결과 확인 --
+tsc -w main.ts ---> 브라우저 에서 js 파일 수정되면 바로바로 확인할수 잇음
+
+
+
+

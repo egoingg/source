@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/*기본*/
+* { margin:0; padding:0; /*box-sizing: border-box;*/ }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:0; }
+
+body { font-family:; font-size:13px; background:black; color:#000;}
+
+#wrap{width:960px; margin:10px auto; background:#986f38; padding:10px}
+
+#header{position:relative; height:250px; background:url('../img/bg_1.jpg') center}
+	.title {position:absolute; top:150px; right:10px; }
+	.title h1{ color:#fff; font-size:50px;}
+	.title p{ color:tan}
+
+#nav{}
+#nav ul {overflow:hidden;}
+#nav li { float:left; margin:2px 1px 0 0;}
+#nav a { display:block; background:black; padding:5px 27px; color:#fff}
+#nav a:hover {background:#ddd; color:#636363}
+#nav li:last-child {margin-right:0;}
+#nav li:last-child a {padding:5px 29px 5px 30px;}
+
+
+#contents{ overflow:hidden; padding:40px 0;}
+	article { float:left; width:35%; margin-right:3.3%;}
+	article #aa { float:right; width:150px; height:150px;  margin:10px 0 0 0; }
+	article:nth-of-type(3){ width:21%; margin-right:0;}
+	article h3{ color:#fff; border-top:1px solid tan}
+	article > p{margin:10px 0; line-height:1.5em;}
+	article .more {text-align:right; }
+	article .more a {color:tan;}
+
+
+    article .coffee_item img {width:200px; height:150px;}
+
+	.txt {color:black; text-align:center; margin:5px 0;}
+
+#banner{ width:960px; margin:10px auto;  background:#986f38; padding:20px 10px; color:#fff}
+
+#footer{ overflow:hidden; width:960px; margin:10px auto; color:tan; }
+#footer address{float:left;}
+#footer h3{float:right;}
+

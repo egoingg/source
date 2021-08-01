@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>transition</title>
+	<style>
+	div { width:300px; height:300px; margin:100px}
+
+	div:first-child { background:red; 
+					transition-duration:2s; /*변화하는데 지속되는 시간*/
+					transition-property:all; /*변화하는 속성*/
+					transition-delay:1s; /*딜레이된 뒤 변화*/
+					transition-timing-function:ease-in;/*진행 속도 조절(ease-in - 천천히 시작)*/
+	}
+	div:nth-child(2) { background:yellow;
+					transition:1s ease-out}
+
+	div:nth-child(3) { 
+
+					background:url("01.jpg");
+					transition-duration:2s; /*변화하는데 지속되는 시간*/
+					transition-property:all; /*변화하는 속성*/
+					
+					transition-timing-function:ease-in;/*진행 속도 조절(ease-in - 천천히 시작)*/
+					
+
+					}
+}
+
+	div:first-child:hover { transform:rotate(45deg); }
+	div:nth-child(2):hover {margin-left:150px;background:green;}
+
+	div:nth-child(3):hover {background:url("02.jpg");}
+	</style>
+ </head>
+ <body>
+ <div>1</div>
+ <div>2</div>
+ <div></div>
+ </body>
+</html>

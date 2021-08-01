@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>HTML Event Handler</title>
+  <link rel="stylesheet" href="assert/basic.css">
+
+ </head>
+ <body>
+	<div id="page">
+		<h1>로고</h1>
+		<form action="">
+			<div id="feedback"></div>
+			<label for="username">사용자이름:</label>
+			<input type="text" id="username">
+			<label for="pw">비밀번호:</label>
+			<input type="password" id="pw">
+			<input type="submit" value="LOG IN">
+		</form>
+	</div>
+
+  <script>
+	var elMsg= document.getElementById("feedback");
+	var elName = document.getElementById("username");
+	function checkN(){
+
+
+		if (elName.value.length < 7)
+		{
+			elMsg.textContent="이름은 7글자 이상 입력해 주세요"; 
+		}else{
+			elMsg.textContent="";
+		}
+	}
+
+	//elName.onblur = checkN; //() 생략 / onblur은 커서가 벗어났을 때 checkN()함수 실행
+	 //********() 생략하면 페이지가 처음 load될때 이벤트 걸으라는  의미*****
+
+	elName.addEventListener('blur',checkN,false);
+	//elName.addEventListner(이벤트,함수,false(boolean값));
+  </script>
+ </body>
+</html>

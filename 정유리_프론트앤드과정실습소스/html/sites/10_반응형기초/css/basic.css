@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/*기본*/
+* { margin:0; padding:0;  }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:0; }
+
+body { font-family:; font-size:; }
+
+div {border:5px solid #c7c7c7; background:#33cc66;
+	line-height:150px; box-sizing: border-box; text-align:center;}
+
+div > div {border:3px solid #000066; background:#3399ff; }
+
+div > div > div {border:2px solid #0f1257; background:#cc99ff; }

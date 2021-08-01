@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/*기본*/
+* { margin:0; padding:0;  }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:0; }
+
+body { font-family:Tahoma,"맑은 고딕",Arial,sans-serif; font-size:16px; background:tan; }
+
+header{background:#fff;height:80px; }
+header h1{ width:960; margin:auto;  line-height:80px; border:1px solid black}
+	
+
+#page_main{background:#cc3366;}
+	#typo{padding:100px 0;}
+		.inner{ padding:50px; text-align:center;}
+		
+
+footer{width:960; margin:auto;padding-top:20px;
+		text-align:right}
+footer small{}
+
+/*popup*/
+#popup{ position:fixed; top:100px; left:10%; padding:20px; background:red}
+.popup_in{}
+#popup button{float:right; padding:10px; background:yellow;
+				border:none; border-radius:5px; outline:none; margin-top:10px }
+#popup button:hover{ background:#fff}
+#popup button:active{ transform:translate(3px,3px); }

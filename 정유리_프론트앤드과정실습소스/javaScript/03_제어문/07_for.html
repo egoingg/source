@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+   body { background:tan; }
+   div { width:500px; padding:50px; margin:100px auto; background:#fdd5b3;
+   text-align:center; }
+   p.answer { width:300px; padding:20px;margin:100px auto; border:10px double #fff;}
+  </style>
+ </head>
+ <body>
+  <div>
+	<h2>for문</h2>
+	<p id="answer"></p>	
+  </div>
+
+ <script>
+	var aa;
+	var msg="";
+
+	for (aa=1; aa <=10 ;aa++ )
+	{
+		/*document.write(aa + "/"); */
+		msg += aa + "/" /* msg = msg+aa */
+		
+	}
+
+	document.getElementById("answer").textContent =msg ;
+ </script>
+ </body>
+</html>

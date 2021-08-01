@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+/*기본*/
+* { margin:0; padding:0; box-sizing: border-box; }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:0; }
+
+ul:after, .sectionIn:after { display: block; content:''; clear: both;}
+
+body { font-family:; font-size:; }
+
+#headerIn{ width:1020px; margin:0 auto; }
+h3  {font-size: 30px;  text-align: center; margin-bottom: 60px; }
+
+header { height: 90px; }
+header h1 { float: left; margin-left: 10px; line-height: 90px; }
+header .nav { float: right;}
+        .nav li {float:left;}
+        .nav a { line-height: 90px; padding: 0 20px; color: black;}
+
+#slides { text-align: center; background: #ccc;}
+
+
+.sectionIn { width:1020px; margin:0 auto; padding: 60px 0;}
+
+.solution { background: #ddd; }
+.solution h3 {}
+.solution ul {}
+.solution li { float: left; width:184px; margin:0 10px;  padding: 30px; text-align: center;}
+.solution li h4 {}
+.solution li p {}
+
+
+.bgGrey { background: #f1f1f1; text-align: center;}
+.bgGrey span { background: #f1f1f1; font-weight: normal;}
+
+.bgSky { background: #ccc; text-align: center;}
+.reportbox li { float: left; height: 100px; background: #fff; width: 310px; margin:40px 10px 40px; }
+
+.reportbox h4 { line-height:100px; }
+
+.sectionIn > div { float: left; width: 490px; margin: 0 10px;}
+.sectionIn > div:first-child { background: #ccc; height: 300px;}
+
+.vision { background: #ccc;height: 148px;  margin-bottom: 20px;}
+.news {background: #ccc; height: 180px ; margin-bottom: 20px;}
+
+footer{background: #ccc;}
+.footerIn{ width:1020px; margin:0 auto; padding: 60px;}

@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/*기본*/
+* { margin:0; padding:0; box-sizing: border-box; }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:0; }
+
+body { font-family:"맑은 고딕","고딕","돋움",sans-serif;  background:#1f2258 url('../img/bg-movie-detail-pattern.png');}
+
+#header_wrap{background:rgba(0,0,0,0.7); border-bottom:3px solid rgba(255,255,255,0.2)}
+header {  width:1100px; height:91px; margin:0 auto;}
+	h1 { position:absolute; left:50%; transform:translateX(-50%); top:23px;}
+	h1 a { display:block; width:140px; height:47px; 
+			background:url("../img/logo-white_new.png") no-repeat; font-size:0; line-height:0;}
+
+.link_area {position:relative; width:1100px; margin:auto; }
+.link_area a { position:absolute; top:40px;  display:block; width:36px; height:36px; 
+				font-size:0; line-height:0;
+				background-repeat: no-repeat;
+				background-position: center;}
+	.sitemap { left:0; background:url("../img/ico-sitemap.png");}
+	.search { left:40px; background:url("../img/ico-search-white.png");}
+	.timetable { right:40px; background:url("../img/ico-schedule-white.png");}
+	.mymega { right:0; background:url("../img/ico-mymega-white.png");}
+
+
+#gnb {}
+#gnb > ul { position:relative; width:1100px; margin:auto;}
+#gnb > ul > li {position:absolute; top:43px; }
+#gnb > ul > li > a {display:block;  padding-bottom:20px; 
+					color:#fff;font-size:17px;}
+
+/* 메인메뉴 롤오버 되었을때 (클라스)*/
+#gnb > ul > li.on > a {border-bottom:5px solid #fff;} 
+
+#gnb > ul > li:nth-child(1) {left:150px; width:35px;}
+#gnb > ul > li:nth-child(2) {left:230px; width:35px;}
+#gnb > ul > li:nth-child(3) {left:310px; width:35px;}
+#gnb > ul > li:nth-child(4) {right:310px; width:55px;}
+#gnb > ul > li:nth-child(5) {right:220px; width:55px;}
+#gnb > ul > li:nth-child(6) {right:150px; width:35px;}
+
+
+
+.gnb_depth2 { display:none; position:relative; width:500px; height:44px; 
+z-index:100; margin-left:-100px;}
+.gnb_depth1 li:nth-child(3) .gnb_depth2{margin-left:-100px;}
+.gnb_depth2 ul { overflow:hidden;}
+.gnb_depth2 li {float:left; margin-left:19px;}
+.gnb_depth2 a { color:#fff; font-size:16px; line-height:44px;}
+
+.gnb_depth_bg { display:none; position:absolute; width:100%; height:44px; background:rgba(0,0,0,0.6); }

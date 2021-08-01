@@ -1,0 +1,54 @@
+// SASS 문법 
+
+//2. @import '파일경로';
+@import './_reset.scss';
+
+//1. 변수사용 - $변수명 : 집어넣을 값
+$mainColor : #ff0000;
+
+.wow-enter {
+    opacity: 0;
+}
+
+.wow-enter-active {
+    opacity: 1;
+    transition: all 500ms;
+}
+
+.red {
+    color:$mainColor;
+}
+
+//3. nesting - 셀렉터 대신 부모 {}안에 자식을 포함해서 쓴디
+div.container{
+    h4 {
+        color:yellow;
+    }
+    p{
+        color:blue;
+    }
+}
+
+//5. 함수 만들때사용 @mixin / @include
+@mixin 함수(){
+    background: #eeeeee;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    width:100%;
+    margin:auto; 
+}
+
+.my-alert {
+    @include 함수() //5. @mixin 함수를 @include 해서 사용
+}
+
+
+
+//4. extend - 중복되는 css 속성 copy해서 쓰는 개념
+//@extend class명
+.my-alert2 {
+    @extend .my-alert;
+    background:tan;
+}
+

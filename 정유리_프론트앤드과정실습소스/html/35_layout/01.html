@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>layout1</title>
+  <style>
+   *{margin:0; padding:0;box-sizing:border-box;}
+   li{list-style:none;}
+
+   #wrap{width:850px; margin:20px auto;}
+
+	#header, #footer{height:80px;background:#ddd;padding:10px;}
+	#main{overflow:hidden; border:3px solid #ddd; margin:10px 0; background:#ddd;}
+		#aside{float:left; width:200px; background:tan;padding:10px; }
+		#content{float:right; width:600px; background:tomato;}
+		#content p {padding:10px;}
+	
+
+  </style>
+ </head>
+ <body>
+ <div id="wrap">
+
+  <div id="header">
+	<h1>HEADER</h1>
+  </div>
+
+  <div id="main">
+	  <div id="aside">
+		<ul>
+			<li>Lorem ipsum dolor sit amet</li>
+			<li>Lorem ipsum dolor sit amet</li>
+			<li>Lorem ipsum dolor sit amet</li>
+			<li>Lorem ipsum dolor sit amet</li>
+			<li>Lorem ipsum dolor sit amet</li>
+			<li>Lorem ipsum dolor sit amet</li>
+		</ul>
+	  </div>
+	  <!-------------------#aside END---------------------->
+
+	  <div id="content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus rhoncus blandit rutrum. Nulla massa sem, luctus eget lorem vel, molestie euismod mi. Proin id luctus elit. Suspendisse viverra odio non ultricies elementum. Quisque ultricies ultricies diam, sagittis tristique lacus fermentum vitae. Curabitur ullamcorper velit id mauris tincidunt, quis ornare sapien maximus. Nunc ac tellus vel enim sodales pellentesque non ac massa. Nulla in diam gravida enim tincidunt aliquet. Sed elementum consequat tortor vitae blandit. Proin nec velit fermentum, ullamcorper felis nec, suscipit mi.
+		</p>
+
+		<p>Aliquam vehicula porttitor odio et pharetra. Etiam viverra non quam nec luctus. Cras lectus quam, auctor bibendum posuere at, sagittis eu tortor. Phasellus quis molestie sem. Vivamus a tristique nisi. Etiam tincidunt placerat fermentum. Integer eget quam dolor. Fusce pretium sodales elementum.
+		</p>
+		<p>Phasellus sed suscipit dolor. Donec sit amet cursus leo. In odio risus, pulvinar ac elementum eu, ullamcorper sodales elit. Sed sed elementum augue, a tincidunt arcu. Nunc sodales ac massa id convallis. Quisque rhoncus diam at orci ultrices rhoncus. Phasellus nunc tellus, ullamcorper vel diam a, fermentum sollicitudin risus.
+		</p>
+	  </div>
+	  <!-------------------#content END---------------------->
+
+
+  </div>
+  <!-------------------#main END---------------------->
+  <div id="footer">
+	   <h1>FOOTER</h1>
+	</div>
+ </div>
+
+ </body>
+</html>

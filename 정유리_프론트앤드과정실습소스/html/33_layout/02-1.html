@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>다단연습_column</title>
+  <style>
+	div{ width:800px; margin:50px auto; border:10px solid #d4d4d4;padding:10px;
+
+	/*column-width:300px;수직 단의 너비 지정*/
+
+	
+	/*vender prefix - 모든 브라우저에서 작동되게 한다(공급업자 접두사)
+	
+	-webkit-:크홈, 사파리, 오페라
+	-o-:오페라
+	-moz-:파이어폭스
+	-ms-:익스플로러
+
+	-ms-column-count:3;
+	-webkit-column-count:3;
+	column-count:3; 수직 단의 숫자
+	*/
+	-ms-columns:auto 3;
+    -webkit-columns:auto 3;
+	columns:auto 3; /* 단의 width 와 단의 count(축약형)*/
+
+	-ms-column-gap:50px;
+    -webkit-column-gap:50px;
+	column-gap:50px;/* 단과 단 사이의 여백 */
+
+
+	-ms-column-rule:2px dotted #d4d4d4; 
+	-webkit-column-rule:2px dotted #d4d4d4; 
+	column-rule:2px dotted #d4d4d4; /*단과 단 사이의 구분선*/
+
+	}
+	h2{ column-span:all;}
+
+  </style>
+ </head>
+ <body>
+ <div>
+    <h2>Curabitur ullamcorper velit id</h2>
+ 	<p>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus rhoncus blandit rutrum. Nulla massa sem, luctus eget lorem vel, molestie euismod mi. Proin id luctus elit. Suspendisse viverra odio non ultricies elementum. Quisque ultricies ultricies diam, sagittis tristique lacus fermentum vitae. Curabitur ullamcorper velit id mauris tincidunt, quis ornare sapien maximus. Nunc ac tellus vel enim sodales pellentesque non ac massa. Nulla in diam gravida enim tincidunt aliquet. Sed elementum consequat tortor vitae blandit. Proin nec velit fermentum, ullamcorper felis nec, suscipit mi.
+	</p>
+	<p>
+		Aliquam vehicula porttitor odio et pharetra. Etiam viverra non quam nec luctus. Cras lectus quam, auctor bibendum posuere at, sagittis eu tortor. Phasellus quis molestie sem. Vivamus a tristique nisi. Etiam tincidunt placerat fermentum. Integer eget quam dolor. Fusce pretium sodales elementum.
+	</p>
+	<p>
+		Phasellus sed suscipit dolor. Donec sit amet cursus leo. In odio risus, pulvinar ac elementum eu, ullamcorper sodales elit. Sed sed elementum augue, a tincidunt arcu. Nunc sodales ac massa id convallis. Quisque rhoncus diam at orci ultrices rhoncus. Phasellus nunc tellus, ullamcorper vel diam a, fermentum sollicitudin risus.
+	</p>
+	<p>
+		In hac habitasse platea dictumst. Maecenas metus neque, congue sit amet risus sed, viverra facilisis velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus auctor arcu ut sem finibus blandit. Mauris faucibus lectus eu augue tempor consectetur. Sed volutpat libero id ornare lacinia. Nulla lobortis justo eu nibh commodo pharetra. Vestibulum non nisl magna. Vestibulum lobortis malesuada condimentum. Mauris iaculis eros a bibendum efficitur. Nulla libero odio, suscipit vel ex ac, commodo dignissim tortor. Duis volutpat et elit sed convallis. Cras egestas neque at velit luctus cursus eget ut leo.
+	</p>
+	<p>
+		Nullam lacinia quam lectus, et lobortis quam scelerisque et. Cras tristique iaculis aliquam. Nam at iaculis tellus. Quisque eu consectetur elit. Donec efficitur sed ipsum sed interdum. Donec sit amet tincidunt quam. Proin efficitur euismod tellus, eget bibendum sapien condimentum in. Aliquam id massa quis dui sodales maximus consectetur nec dui. Pellentesque porta venenatis lacus, sit amet efficitur urna rhoncus at. Duis ac tempus nibh. Duis vestibulum ipsum nibh, ut faucibus orci tempus accumsan. Aenean id tortor eget justo scelerisque mollis.
+	</p>
+ </div>
+ </body>
+</html>

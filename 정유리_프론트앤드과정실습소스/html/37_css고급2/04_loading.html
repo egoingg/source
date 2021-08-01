@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Loading...</title>
+  <style>
+	* { margin:0; padding:0;}
+	.bg { position:fixed; left:0; right:0; top:0; bottom:0; 
+
+			background: #db6600;
+			background: -moz-linear-gradient(-45deg,  #db6600 0%, #1013a8 100%);
+			background: -webkit-linear-gradient(-45deg,  #db6600 0%,#1013a8 100%);
+			background: linear-gradient(135deg,  #db6600 0%,#1013a8 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db6600', endColorstr='#1013a8',GradientType=1 );
+
+
+			animation:bgChange 5s infinite;
+		}
+
+	/* 배경색 전환 위한 애니메이션 */
+
+	@keyframes bgChange {
+		0% { filter:hue-rotate(0deg);}
+		100% { filter:hue-rotate(360deg);}
+	}
+
+	.load { position:absolute; height:100px; left:50%; top:50%; transform:translate(-50%, -50%);
+			 text-align:center;
+			}
+	.load h2 { letter-spacing:10px; color:white; font-family:arial, sans-serif; margin-bottom:30px;}
+
+	.load span {display:inline-block; width:10px; height:60px; border-radius:5px; margin:0 2px;
+				background:rgba(255,255,255,.7);
+				animation:barMove 2s infinite;
+				}
+	/* bar의 크기, 위치가 변하는 애니메이션*/
+	@keyframes barMove {
+		0% { transform:translateY(0);}
+		33% { transform:translateY(25px); height:20px}
+		50% { transform:translateY(-15px);}
+		70% { transform:translateY(5px);}			
+		100% { transform:translateY(0);}
+	}
+	
+
+	.load span.bar1 {}
+	.load span.bar2 { animation-delay:0.2s;}
+	.load span.bar3 { animation-delay:0.3s;}
+	.load span.bar4 { animation-delay:0.4s;}
+
+  </style>
+ </head>
+ <body>
+ <div class="bg">
+ 	<div class="load">
+		<h2>LOADING</h2>
+		<span class="bar1"></span>
+		<span class="bar2"></span>
+		<span class="bar3"></span>
+		<span class="bar4"></span>
+	</div>
+ </div>
+ </body>
+</html>

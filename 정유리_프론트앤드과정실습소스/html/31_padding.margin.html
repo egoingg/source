@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>여백</title>
+ </head>
+ <style>
+  div{	border:1px solid #000; 
+		background:#ffffcc;
+		
+	}
+ .box1{padding:50px}
+ .box2{margin:50px; border:thick double red;}/*의 두께 속성 - thin, medium, thick*/
+
+ .box3,.box4,.box5,.box6,.box7,.box8{width:500px; }
+ .box4{padding:30px; border-radius:10px 0 5px 30px;}
+ .box5{padding:30px; box-sizing:border-box;}
+ /*box-sizing:border-box => width나 height로 설정한 값에 padding , border 값이 포함되게한다(w, h 유지됨) 기본값은 content-box*/
+
+ .box6,.box7,.box8{margin:50px; background:#ccffcc;}
+ .box6{box-shadow:10px 5px 5px #ff6699} /* box-shadow:x축 이동 / y축 이동 / 퍼지는 정도 / 색깔 */
+
+ .box7{box-shadow:0 0 20px 10px #0033ff}/* box-shadow:x축 이동 / y축 이동 / 퍼지는 정도 /(색이 퍼지기 전까지 유지되는 거리) / 색깔 */
+ .box8{box-shadow:0 0 20px #0033ff inset} /*inset=>박스 안쪽에 생김*/
+
+ </style>
+ <body>
+ <h1>padding / margin</h1>
+
+ <div class="box1">
+    <h3>padding:50px</h3>
+	<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra, urna vel vehicula pellentesque, velit ligula mollis diam, non eleifend nibh justo eget metus. Nunc ligula elit, tempor in tincidunt mattis, malesuada eget urna. Ut vel dictum ligula. Suspendisse cursus, purus sed viverra faucibus, odio elit ornare nisi, at volutpat mi orci nec felis. Aenean ut justo non lectus ornare blandit. Vestibulum iaculis felis at orci elementum mollis. Fusce tristique nec eros in venenatis. Maecenas ullamcorper lorem id erat fringilla porta sit amet vitae odio. Curabitur vulputate nulla odio, et venenatis lacus lacinia ullamcorper. Donec ullamcorper, nunc a interdum posuere, eros lectus lacinia eros, at pharetra magna odio et purus. Ut eget vestibulum felis, volutpat hendrerit nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+	</p>
+ </div>
+
+ <div class="box2">
+    <h3>margin:50px / border:thick double red</h3>
+	<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra, urna vel vehicula pellentesque, velit ligula mollis diam, non eleifend nibh justo eget metus. Nunc ligula elit, tempor in tincidunt mattis, malesuada eget urna. Ut vel dictum ligula. Suspendisse cursus, purus sed viverra faucibus, odio elit ornare nisi, at volutpat mi orci nec felis. Aenean ut justo non lectus ornare blandit. Vestibulum iaculis felis at orci elementum mollis. Fusce tristique nec eros in venenatis. Maecenas ullamcorper lorem id erat fringilla porta sit amet vitae odio. Curabitur vulputate nulla odio, et venenatis lacus lacinia ullamcorper. Donec ullamcorper, nunc a interdum posuere, eros lectus lacinia eros, at pharetra magna odio et purus. Ut eget vestibulum felis, volutpat hendrerit nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+	</p>
+ </div>
+ <center>
+	<div class="box3">
+		<h3>width:500px</h3>
+		<p>
+		3.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra, urna vel vehicula pellentesque, velit ligula mollis diam, non eleifend nibh justo eget metus. Nunc ligula elit, tempor in tincidunt mattis, malesuada eget urna. Ut vel dictum ligula. 
+		</p>
+	</div>
+
+	<div class="box4">
+		<h3>width:500px / padding:30px</h3>
+		<p>
+		원래 가로 길이 500px에서 좌우 padding 30px씩 추가하면 가로길이가 500+30+30=560px이 된다.
+		
+		</p>
+	</div>
+
+	<div class="box5">
+		<h3>width:500px / padding:30px /box-sizing:border-box</h3>
+		<p>
+		<b>box-sizing:border-box</b> => width나 height 로 설정한 값에 padding , border 값이 포함되게한다
+		</p>
+	</div>
+
+	<div class="box6">
+		<h3>box-shadow:10px 5px 5px #ff6699</h3>
+		<p>
+		666Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra, urna vel vehicula pellentesque, velit ligula mollis diam, non eleifend nibh justo eget metus. Nunc ligula elit, tempor in tincidunt mattis, malesuada eget urna. Ut vel dictum ligula. 
+		</p>
+	</div>
+
+	<div class="box7">
+		<h3>box-shadow:0 0 20px 10px #0033ff</h3>
+		<p>
+		7777Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra, urna vel vehicula pellentesque, velit ligula mollis diam, non eleifend nibh justo eget metus. Nunc ligula elit, tempor in tincidunt mattis, malesuada eget urna. Ut vel dictum ligula. 
+		</p>
+	</div>
+	<div class="box8">
+		<h3>box-shadow:0 0 20px #0033ff inset</h3>
+		<p>
+		888Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra, urna vel vehicula pellentesque, velit ligula mollis diam, non eleifend nibh justo eget metus. Nunc ligula elit, tempor in tincidunt mattis, malesuada eget urna. Ut vel dictum ligula. 
+		</p>
+	</div>
+ </center>
+ </body>
+</html>

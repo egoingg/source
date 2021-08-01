@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>속성 선택자</title>
+ </head>
+ <style>
+ input{ 
+	border:1px solid #6699ff;
+	height:50px;
+ }
+ a{
+	color:red;
+ }
+
+ /*속성선택자*/
+ input[type="text"]{
+	background-color:#ccffff;
+ }
+ input[type="password"]{
+	background:#990033;
+ }
+  a[href]{
+	background:#ffcc00;
+ }
+
+ </style>
+ <body>
+ <a id="top"></a>
+ <h2>속성선택자</h2>
+ <form>
+	 <input type="text">
+	 <input type="password">
+	 <input type="text">
+	 <input type="tel">
+	 <input type="email">
+	 <input type="text">
+ </form>
+
+ <br><br><br><br><br><br><br>
+ <a>a 태그 사용</a><br>
+ <a href="#">a href= # 표시는 가상링크 사용</a>
+
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ <a href="#top">TOP</a>
+ </body>
+</html>

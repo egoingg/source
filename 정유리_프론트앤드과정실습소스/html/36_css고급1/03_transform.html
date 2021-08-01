@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>transform</title>
+  <style>
+	body > div { width:100px; height:100px; border:10px solid black; float:left;
+	margin:40px}
+	
+	body > div > div {width:100px; height:100px; background:tan;}
+
+	.trans01 { transform:translate(50px,-20px) }
+	.trans02 {transform:translateY(-20px) }
+	.trans03 {transform:scale(1.5) } /*1은 원래 크기*/
+	.trans04 {transform:scaleY(2) } 
+	.trans05 {transform:scale(1.5,0.4) } 
+	.trans06 {transform:skew(30deg)}
+	.trans07 {transform:skewY(30deg)}
+	.trans08 {transform:skew(30deg,40deg)}
+	.trans09 {transform:rotate(45deg)}
+	.trans10 {transform:rotate(45deg); transform-origin:right 50%}
+	/* transform-origin(변형된 요소의 위치를 변경할수 있다 transform 속성과 함께 사용):50% 50% - 기본 오션 왼쪽 위가 기준 */
+  </style>
+ </head>
+ <body>
+ <div>
+ 	<div class="trans01"></div>
+ </div>
+ <div>
+ 	<div class="trans02"></div>
+ </div>
+ <div>
+ 	<div class="trans03"></div>
+ </div>
+ <div>
+ 	<div class="trans04"></div>
+ </div>
+ <div>
+ 	<div class="trans05"></div>
+ </div>
+ <div>
+ 	<div class="trans06"></div>
+ </div>
+ <div>
+ 	<div class="trans07"></div>
+ </div>
+ <div>
+ 	<div class="trans08"></div>
+ </div>
+ <div>
+ 	<div class="trans09"></div>
+ </div>
+ <div>
+ 	<div class="trans10"></div>
+ </div>
+ </body>
+</html>

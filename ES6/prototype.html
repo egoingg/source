@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
+    <title>Document</title>
+</head>
+<body>
+    <img id="test" src="https://codingapple1.github.io/kona.jpg"> 
+    <script>
+        var 부모 = {name:'kim', age:50}
+        var 자식 = Object.create(부모) //상속기능구현 : Object.create(프로토타입으로쓸object)
+        console.log('자식.age:', 자식.age)
+        console.log('부모.age:', 부모.age)
+        자식.age = 20;
+        console.log('자식.age:', 자식.age)
+        console.log('부모.age:', 부모.age)
+
+        var 손자 = Object.create(자식)
+
+        class parent{
+            constructor(){
+                this.name = 'kim'
+                this.sayHi = function(){}
+            }
+
+            sayBye(){ console.log('bye')} 
+        }
+
+        var 짜식 = new parent()
+        Object.getPrototypeOf(짜식)
+
+        class 할아버지{
+            constructor(name){
+                this.성 = 'kim'
+                this.이름 = name 
+            
+        }
+
+            sayHi(){
+                console.log('안녕 나는 할아버지prototype')
+            }
+        }
+
+        class 아버지 extends 할아버지{
+            constructor(name){
+                 super(name)
+                this.나이 = 50;
+            }
+
+            sayHi(){
+                console.log('안녕 나는 아버지prototype')
+                super.sayHi()
+            }
+
+            get get내년나이(){
+                return this.나이 + 1;
+            }
+
+            set set나이(나이){
+                this.age = parseInt(나이);
+            }
+        }
+
+        var 아버지1 = new 아버지('만석')
+        아버지1.sayHi()
+
+        아버지1.get내년나이
+        아버지1.set나이 = '30'
+//1==============class , exetends, getter, setter 연습문제  5개
+class 강아지{
+    constructor(견종, 색깔){
+        this.type = 견종
+        this.color = 색깔
+    }
+    한살먹기(){
+        if (this instanceof 고양이)
+            this.age++
+    }
+}
+var 강아지1 = new 강아지('말티즈','white') 
+var 강아지2 = new 강아지('진돗개','brown')
+
+//2--------------------
+class 고양이 extends 강아지{
+    constructor(견종, 색깔, 나이){
+        super(견종, 색깔)
+        this.age = 나이
+    }
+}
+
+var 고양이1 = new 고양이('코숏','white',5)
+var 고양이2 = new 고양이('러시안블루','brown',2)
+
+//3------------------------------
+고양이1.한살먹기()
+고양이2.한살먹기()
+
+//강이지1.한살먹기() //에러
+
+//4----------------------------
+class Unit{
+    constructor(){
+        this.공격력 = 5;
+        this.체력 = 100;
+    }
+
+    get battlePoint(){
+        return this.공격력 + this.체력
+    }
+
+    set heal(param)
+    {
+        this.체력 = this.체력 + param
+    }
+}
+
+var unit1 = new Unit();
+console.log(unit1.battlePoint)
+unit1.heal = 150
+console.log(unit1.체력)
+//5----------------------------
+var data ={
+    odd :[],
+    even : [],
+
+    setter함수(...param){
+        
+        // for (let index = 0; index < param.length; index++) {
+        //         //홀수이면
+        //     if( param[index] % 2 === 0)
+        //     this.odd.push(param[index])
+        //      else //짝수이면
+        //      this.even.push(param[index])
+        // }
+        param.forEach((a) => {
+            if( a % 2 === 0)
+            this.odd.push(a)
+             else //짝수이면
+             this.even.push(a)
+        });
+    },
+
+    get getSort(){
+        var arr = [...this.odd, ...this.even]
+        return arr.sort().join()
+    } 
+}
+
+data.setter함수(1,2,3,4,5)
+console.log(data.odd)
+console.log(data.even)
+console.log(data.getSort)
+
+let 신체정보 = {body : {height:190, weight:70}, size: ['상의large', '바지 30인치']}
+
+let {body : {height, weight}, size: [상의, 하의]} = 신체정보
+
+
+console.log (height, weight)
+console.log (상의, 하의)
+
+
+//순차 실행 promise ( 콜백함수 디자인의 대체품일뿐)
+
+//콜백함수 모형
+function 첫째함수(콜백) {
+    console.log(1)
+    콜백('완료')
+}
+
+첫째함수(function(msg){
+     console.log(2)
+     console.log(msg)
+})
+
+//promise
+
+// var 프로미스 =  new Promise(function(성공, 실패){
+//     console.log('작업시작')
+//     성공()
+
+// })
+
+
+// 프로미스.then(function(){
+//     console.log('성공')
+// }).catch(function(){
+//     console.log('실패')
+// })
+
+var img = document.getElementById('test')
+
+
+var 프로미스 = new Promise(function (성공, 실패) {
+    //동작
+    img.addEventListener('load', function() {
+        성공()
+    })
+
+    img.addEventListener('error', function() {
+        실패()
+    })
+
+    
+})
+
+
+프로미스.then(function(){
+    console.log('성공')
+}).catch(function(){
+    console.log('실패')
+})
+
+//==========================================================
+var 프로미스 = new Promise(function (성공) {
+    $.ajax({type:'GET', url:'https://codingapple1.github.io/hello.txt'}).done(function (결과) {
+        성공(결과)
+    })
+
+  
+    
+})
+
+
+
+프로미스.then(function (a) {
+    console.log(a)
+
+    return  new Promise(function (성공) {
+            $.ajax({type:'GET', url:'https://codingapple1.github.io/hello2.txt'}).done(function (결과) {
+                성공(결과)
+            })
+})
+
+}).then(function (a) {
+    console.log(a)
+})
+
+var obj = {name:'abcaac', age:30}
+
+for (var key in obj) /// for in - object
+{
+    console.log(obj[key])
+}
+
+// for of - array, 문자, arguments, NodeList, Map, Set
+//for of 쓸수잇는지 검사 ===> 어레이[Symbol.iterator]();
+
+//var arr = ['하하하', 300]
+var arr = 'aaabbbccc'
+var obj = {}
+//var k =''
+for (var key of arr) {
+
+    if (obj[key] === undefined)
+        obj[key] = 0;
+
+    obj[key] = obj[key] + 1
+} 
+console.log(obj)
+
+//구구단
+var dans = [2,3,4,5,6,7,8,9]
+var gob = [1,2,3,4,5,6,7,8,9]
+
+var result = 0
+
+for (var dan of dans) {
+    for (var num of gob) {
+        result = dan * num
+        console.log(`${dan}X${num}=${result}`)
+    }
+}
+
+//simbol - 오브젝트에 비밀데이터를 사용하고 싶을때 사용
+//symbol은 반복문에 안뜸
+
+//설명이 같다고 같은 symbole이 아님
+var person = {name:'kim'}
+
+var 몸무게 = Symbol('비밀로할몸무게')
+var 키 = Symbol('비밀로할키')
+
+person[몸무게]= 100;
+person[키]= 160;
+
+console.log(person)
+
+
+
+//Map자료형(자료간의 연관성) - 키 value 값을 저장가능 , object 와 유사
+//Map이 object와 차이점은 key  값에 모든 자료형 올수 잇음
+//
+
+// var man = new Map()
+// man.set([1,2,3], 'kim')
+// man.set('age', 30)
+
+// man.get('age')//자료출력  get
+// man.delete('age')//자료 삭제 delete
+// man.size//자료 갯수 size
+
+// var man = new Map([
+//     ['name','kim'],
+//     ['age',20]
+// ])
+
+// for (const key of man.keys) {
+//     console.log(key)
+// }
+
+// for (const val of man.values) {
+//     console.log(val)
+// }
+//console.log(man)
+
+
+//set - 중복 자료 포함히지 않는 array 만들때 사용 
+//사용가능 반복문 = forEach , forin
+var 출석부 = ['john','tom','andy','tom']
+
+var 출석부2 = new Set(['john','tom','andy','tom'])
+출석부2.add('tom') //추가 add- 중복값 제거됨
+출석부2.delete('tom') //삭제 delete
+출석부2.has('john') //존재 유무 has
+출석부2.size //갯수
+
+//set 자료형 <-> array 자료형
+//array를 set 변환 , set을 array로 변환
+//arry -> set (중복제거) -> array 로 변환
+var 출석부2 = new Set(['john','tom','andy','tom']) //Array를 Set으로 바꾸기
+출석부 = [...출석부2] //Set을 Array로 바꾸기
+
+for (var val of 출석부2) {
+    console.log(val)
+}
+
+출석부2.forEach(function (a) {
+    console.log(a)
+})
+
+
+</script>
+</body>
+</html>

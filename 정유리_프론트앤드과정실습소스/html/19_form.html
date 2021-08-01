@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>폼태그</title>
+  <style>
+	input{padding:5px;}
+	li{margin-bottom:5px; list-style:none;}
+  </style>
+ </head>
+ <body>
+ <center>
+ <h3>로그인</h3>
+ <form method="" action="">
+	 <table cellpadding="5">
+		<tr>
+			<td >ID</td>
+			<td><input type="text" size="15" maxlength="12"></td>
+			<td rowspan="2"><input type="submit" value="LOG IN" style="height:56px;"></td>
+		</tr>
+		<tr>
+			<td>PASSWORD</td>
+			<td><input type="password" size="15" maxlength="12"></td>
+			
+		</tr>
+	 </table>
+ </form>
+ </center>
+ <hr width="50%">
+
+
+ <form method="" action="">
+	 <div style="width:600px;margin:auto;">
+		<h1>회원가입</h1>
+		<fieldset>
+			<legend>로그인 정보</legend>
+			<ul>
+				<li><input type="text" maxlength="10" autofocus placeholder="아이디입력"></li>
+				<li><input type="text" maxlength="10" placeholder="비밀번호입력"></li>
+				<li><input type="password" maxlength="10" placeholder="비밀번호 다시 입력"></li>
+			</ul>
+		</fieldset>
+		<fieldset>
+			<legend>가입자정보</legend>	
+			<ul>
+				<li><label for="name">이름</label>:<input type="text" maxlength="4" id="name" required></li>
+				<li><label for="em">메일주소</label>:<input type="email" maxlength="30" id="em" required></li>
+				<li><label for="tel">전화번호</label>:<input type="tel" maxlength="15" id="tel"></li>
+				<li><label for="dd">생년월일</label>:<input type="date"  id="dd"></li>
+				<li>성별:
+					<label>남자<input type="radio" name="pe" id="man"></label>
+					<label>여자<input type="radio" name="pe" id="woman"></label>
+					<label>중성<input type="radio" name="pe" id="no"></label>
+				</li>
+				<li>관심분야:
+					<label>뉴스<input type="checkbox" name="hobby" id="news"></label>&nbsp;&nbsp;
+					<label>스포츠<input type="checkbox" name="hobby" id="sports"></label>&nbsp;&nbsp;
+					<label>영화<input type="checkbox" name="hobby" id="movie"></label>&nbsp;&nbsp;
+					<label>음악<input type="checkbox" name="hobby" id="music"></label>&nbsp;&nbsp;
+					<label>독서<input type="checkbox" name="hobby" id="reading"></label>&nbsp;&nbsp;
+					<label>웹툰<input type="checkbox" name="hobby" id="webtoon"></label>
+				</li>
+				<li>거주지:
+					<select>
+						<option>----선택----</option>
+						<option>서울·경기</option>
+						<option>강원</option>
+						<option>충청</option>
+						<option>전라</option>
+						<option>경상</option>
+						<option>제주</option>
+					</select>
+				</li>
+				<li>증명사진업로드:<input type="file" id=""></li>
+				<li>가입동기:<textarea rows="6" cols="55" placeholder="가입동기를 입력하세요."></textarea></li>
+			</ul>
+		</fieldset>
+
+		<div style="text-align:center;margin-top:30px;margin-bottom:50px">
+			<button type="reset">RESET</button>
+			<button type="submit">OK</button>
+		</div>
+	 </div>
+ </form>
+
+ </body>
+</html>

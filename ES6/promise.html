@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <img id="test" src="https://codingapple1.github.io/kona.jpg"> 
+    <button id = 'btn'>클릭</button>
+    <script>
+        //Q1. 이 이미지가 로드가 되면 콘솔창에 성공, 로드가 실패하면 콘솔창에 실패를 출력하고 싶은데
+        // Promise 문법의 then, catch 함수를 사용해 만들고 싶습니다. 어떻게 코드를 짜면 될까요?
+
+        // (참고) 이미지 로딩이 끝났다는 것은 <img>에 load라는 이벤트리스너를 붙여서 체크가 가능합니다. 
+        // (참고) 이미지 로딩이 실패했다는 것은 <img>에 error라는 이벤트리스너를 붙여서 체크가 가능합니다.
+
+        const pm = new Promise(function (성공,실패) {
+            document.getElementById('test').addEventListener('load', function () {
+                성공()
+            })
+            document.getElementById('test').addEventListener('error', function () {
+                실패()
+            })
+      
+        })
+
+        pm.then(function () {
+            console.log('성공입니다.')
+        })
+        .catch(function() {
+            console.log('실패입니다.')
+        })
+
+        // Q2. Ajax 요청이 성공하면 무언가 코드를 실행하고 싶습니다. 
+
+        // https://codingapple1.github.io/hello.txt 라는 경로로 GET 요청을 하면 인삿말이 하나 딸려옵니다. 
+
+        // 여기로 GET 요청을 해서 성공하면
+
+        // Promise의 then 함수를 이용해서 Ajax로 받아온 인삿말을 콘솔창에 출력해주고 싶습니다.
+
+        // 어떻게 하면 될까요? (jQuery Ajax 사용가능) 
+
+        // 이것은 jQuery CDN 파일
+        //<script src="https://code.jquery.com/jquery-3.4.1.min.js" />
+
+        const pmAj = new Promise(function (성공, 실패) {
+            $.get('https://codingapple1.github.io/hello.txt').done(function (result) {
+                성공(result)
+            })
+        })
+
+        pmAj.then(function (result) {
+            console.log(result)
+        })
+
+        //Q3. Promise chaining 
+
+        // 2번 문제에서 https://codingapple1.github.io/hello.txt 라는 경로로 GET 요청을 한 뒤에
+
+        // .then을 이용해 인삿말을 콘솔창에 출력해보았습니다. 
+
+        // 이번엔 그 직후 https://codingapple1.github.io/hello2.txt 라는 경로로 GET 요청을 또 하고
+
+        // .then을 이용해 인삿말을 또 출력해보고 싶습니다. 
+
+        
+
+        // 쉽게 말하면 
+
+        // 1. hello.txt GET 요청
+
+        // 2. 그게 완료되면 hello2.txt GET 요청
+
+        // 3. 그게 완료되면 hello2.txt 결과를 콘솔창에 출력
+
+        // 을 하고 싶다는 말입니다. 
+
+
+        const pm1 = new Promise(function (성공, 실패) {
+            $.get('https://codingapple1.github.io/hello.txt').done(function (result) {
+                성공(result)
+            })
+        })
+
+
+        pm1.then(function (result) {
+            console.log(result)
+
+            const pm2 =  new Promise(function (성공, 실패) {
+                $.get('https://codingapple1.github.io/hello2.txt').done(function (result) {
+                    성공(result)
+                })
+            })
+            return pm2
+
+        }).then(function (result) {
+            console.log(result)
+        })
+
+        ///////////////////////////
+
+        function delayP(){
+
+            return new Promise(function (성공, 실패) {
+                setTimeout(() => {
+                    성공(new Date().toISOString())
+                }, 1000);
+            })
+        }
+
+        function GetAjax(){
+
+            return new Promise(function (성공, 실패) {
+                setTimeout(() => {
+                    $.get('https://codingapple1.github.io/shop/data2.json').then((data)=>{
+                        성공( data, new Date().toISOString())
+                    }).catch(()=>{
+                        실패()
+                    })
+                }, 1000);
+            })
+        }
+
+        delayP().then(function (result) {
+            console.log(1, result)
+
+            return GetAjax()
+        }).then(function (data,strdate) {
+            console.log(2, strdate, data)
+        }).catch(function () {
+            console.log('실패입니다')
+        })
+
+        //async + then
+
+        //async 함수앞에만 붙여준다. 그 함수는 promisem를 퉤 뱓어준다. 그래서 promeis나까 then 을 쓸수있다.
+        async function 연산함수()
+        {
+            return '연산완료'
+        }
+
+        연산함수().then(function (result) {
+            console.log(result)
+        })
+
+        //async + await
+        //await가 then 역할
+
+        async function buttonClick()
+        {
+            //실행1
+            const prm = new Promise(function (성공, 실패) {
+                                    // document.getElementById('btn').addEventListener('click',function (e) {
+                                    //     성공(e.target + ' 버튼클랙했어요')
+                                    // })
+
+                                    setTimeout(function (params) {
+                                 console.log('3초걸리는연산중')
+                                 성공('3초연산성공')
+                             },3000)   
+                
+            })
+
+            const result = await prm // promise 완료딜때까지 기다린다.
+            console.log(result)
+
+            //실행2
+
+
+            const prm2 = new Promise(function (성공, 실패) {
+                                   
+                             setTimeout(function (params) {
+                                 console.log('1초걸리는연산중')
+                                 성공('1초연산성공')
+                             },1000)   
+                
+            })
+
+            const result2 = await prm2 // promise 완료딜때까지 기다린다.
+            console.log(result2)
+
+            
+
+        }
+
+        buttonClick()
+
+
+    </script>
+</body>
+</html>

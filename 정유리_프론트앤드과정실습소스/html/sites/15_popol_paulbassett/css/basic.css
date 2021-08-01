@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+/*기본*/
+* { margin:0; padding:0; box-sizing: border-box; }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:0; }
+
+ul:after, .sectionIn:after,.quickBanner:after, .product .inner, gnbSubInner { display: block; content:''; clear: both;}
+.hide { display: none;}
+
+body { font-family:'Malgun Gothic',arial,sans-serif; color:#636363; font-size:16px; }
+
+header { position: sticky; top: 0; left: 0; text-align: center; background: #F6F5EF;  opacity: .7; z-index: 999; }
+#headerIn{ position: relative; width:1020px; margin:0 auto; }
+    h1 {  margin:auto; padding-top:10px; text-align: left; opacity: 1}
+
+    .quickBanner { position:absolute; top:40px; right:0px;} 
+    .quickBanner li{ float:left; padding-left: 20px;}
+
+    .quickBanner a:before { content: ''; display: inline-block; width:10px; height: 12px; }
+    .quickBanner li:first-child a:before { background: url('../img/topMenuIcon.png') -20px -12px;}
+    .quickBanner li:last-child  a:before { background: url('../img/topMenuIcon.png') -10px -12px;}
+
+    .quickBanner a{  font-size:10px; color:inherit; }
+
+    .lnb{ position:absolute; top:18px; right:0;}
+    .lnb li{ float:left; margin-left:10px;}
+    .lnb a {  font-size:11px; font-weight:bold; color:inherit;}
+
+    .gnb { }
+    .gnb > li{ float:left; width:170px; height:60px; text-align:center; transition:0.5s; }
+    .gnb > li > a{display:block; font-size:14px; font-weight:bold; color:#000; line-height: 60px;}
+    .gnb > li:hover { background:#ba000c;}
+    .gnb > li:hover > a{color:#fff;}
+
+ 
+    .gnbSub { display: none; position:absolute; top:134px; width:100%; height:280px; z-index:999;
+			 background:#4F4C4B;}
+    .gnbSubInner { width:1020px; margin:0 auto; padding-top:20px;}
+    .gnbSub ul { float:left; width:170px; text-align:center;}
+    .gnbSub ul li {margin-bottom:10px;}
+    .gnbSub ul li a {font-size:13px; color:#bcbcbc}
+    .gnbSub ul li a:hover {color:#fff}
+
+/*.slider{  width:1880px; height:480px; margin:auto;}*/
+.slider{  width:1020px; height:480px; margin:auto;}
+
+.bg { background: #F7EA9B}
+
+h3 { font-size: 30px; text-align: center; padding: 20px;}
+
+#content{ background-image: url('../img/PaulBassettTop.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.sectionIn { width:1020px; margin:0 auto; padding-bottom: 50px;}
+.product { background: #F5F0E9; text-align: center;}
+.product .menu {padding: 30px;}
+.product .menu li {  display: inline-block;}
+.product .menu li a {display: block; height: 50px; line-height: 50px; padding: 0 50px; color: #000; border-bottom:1px solid #a59e9e;border-top:1px solid #a59e9e; opacity: 0.7;}
+.product .menu a:hover, .menu a.on { background: rgb(210, 180, 140); opacity: 1;} /* color class = on */
+
+
+.product .inner p { position: relative; float: left; width:500px; height: 400px; margin-right: 20px; margin-top: 20px;}
+.product .inner p:first-child { margin-top: 0;}
+.product .inner p:nth-child(2) { margin-top: 0;}
+.product .inner p:nth-child(2n) { margin-right: 0;}
+
+.product .inner p strong { position: absolute;  width: 100%;  bottom: 0; left:0; font-size: 20px; 
+                background: rgba(0, 0, 0,0.7); padding: 15px; color: #fff; z-index: 5;}
+.product .inner p strong:before { content: 'NEW'; display: block; position: absolute; font-size: 13px; color: red;}
+
+.product .inner p strong i {display: block; font-style: normal; font-size: small; opacity: 0.7; font-weight: normal; margin-top: 5px;}
+
+
+.award { text-align: center;}
+.award .sectionIn { position: relative;  padding-bottom:0; height: 480px;  }
+
+.award h3{ position: absolute; top:2%; left:15%; font-size: 30px; }
+.award span{ position: absolute; top:35%; left:17%; font-size: 30px;  text-align: center;}
+
+
+.award p {position: absolute; top:35%; width:60%; display: inline-block; left:35%; font-size: 13px; color: #fff; text-align: left; line-height: 1.8;}
+/*.award img { vertical-align: top;}*/
+
+.desc { display: block; position: absolute; bottom:0; left:35%; display: flex; text-align: left; width:600px; font-size: 13px; color: #fff;}
+.desc div{ padding: 10px 10px;}
+.row1 { flex: 1; display:flex; flex-direction: column; text-decoration: overline solid red;}
+.col1-1 {}
+.col1-2{}
+.row2 { flex:5; display:flex; flex-direction: column;}
+.col2-1 {}
+.col2-2{}
+
+
+
+.col2-2 i:before { content: '★'; display: inline-block; width:50px; height: 50px; background: url('../img/icon.png') 0 0;  }
+/*
+.col2-2 .i1:before { background: url('../img/icon.png') 0 0;}
+.col2-2 .i2:before { background: url('../img/icon.png') 0px 20px;}
+*/
+
+
+.event { background:rgb(224, 211, 194); text-align: center;}
+.eventBox { display: flex;}
+.eventBox li {height: 200px; margin-right: 2%; background: #ccc; cursor: pointer;
+background-repeat: no-repeat;background-size: cover;
+}
+.eventBox li.s1 {  flex:1;   
+    background-image: url("../img/event2.jpg");background-position: 60% center;
+}
+.eventBox li.s2 {  flex:2; 
+      background-image: url("../img/event33.jpg");background-position: center;
+}
+.eventBox li.s3 {  flex:2; 
+  background-image: url("../img/event22.jpg");background-position: center;}
+.eventBox li.s4 {  flex:1; margin-right: 0;
+  background-image: url("../img/event44.jpg");background-position: 80% center;}
+
+
+.app { background: #F5F0E9; text-align: center;}
+.appBox { display: flex;}
+.appBox li { position: relative; margin-right: 2%; background: #382E2C;}
+
+.appBox li.s1 {  flex:1; }
+.appBox li.s2 {  flex:1; }
+.appBox li.s3 {  flex:1; margin-right: 0;}
+.appBox a { display: inline-block; width:50px; height:64px; margin: 10px; font-size: 30px; color: #fff;  }
+
+.appBox li.s1 a { background: url('../img/bottomIcon.png') -6px 0px; }
+.appBox li.s2 a { background: url('../img/bottomIcon.png') -50px 0px; }
+.appBox li.s3 a { background: url('../img/bottomIcon.png') -100px 0px; }
+
+.appBox span { position: absolute; top:20%; left:35%; font-weight: bold;
+}
+
+.totop {display: none; position: fixed; bottom: 30px; right:60px;  display: inline-block; z-index: 999;}
+
+
+/*footer */
+footer {background:#3D3937}
+#footerIn {width:1020px; margin:0 auto; padding:33px 0 50px}
+footer ul{overflow:hidden; margin-bottom:20px;}
+footer li{float:left; padding:0 6px 0 8px;}
+footer li:first-child{padding-left:0; background:none;}
+footer a{color:#fff; font-size: 13px; }
+footer a:hover{text-decoration:underline;}
+footer p{ color:inherit; line-height:140%;font-size:11px; word-spacing:-3px;}

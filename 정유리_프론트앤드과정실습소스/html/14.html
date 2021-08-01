@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>테이블응용2</title>
+  <style>
+	th{background:#ffcc66; font-size:14px;}
+	td{background:#fff; font-size:13px; }
+	#t2 th{background:#ffcc66}
+  </style>
+ </head>
+ <body>
+ <!-- 수안보 온천 테이블 연습
+ https://www.hanwharesort.co.kr/irsweb/resort3/resort/rs_room.do?bp_cd=0601
+ -->
+
+ <!-- 첫번째 테이블 -->
+	<table border="0" width="650" cellpadding="10" cellspacing="1" bgcolor="#ff9900">
+	<caption>수안보 온천_입/퇴실시간</caption>
+	<tr>
+		<th colspan="2">시기</td>
+		<th width="150">시간</td>
+	</tr>
+	<tr>
+		<td rowspan="2" width="150">입실시간</td>
+		<td width="300">주말/연휴/성수기(여름,겨울)</td>
+		<td>15시</td>
+	</tr>
+	<tr>
+		
+		<td>비수기 주중</td>
+		<td>14시</td>
+	</tr>
+	<tr>
+		<td rowspan="2">퇴실시간</td>
+		<td>주말/연휴/성수기(여름,겨울)</td>
+		<td>11시</td>
+	</tr>
+	<tr>
+		
+		<td>비수기 주중</td>
+		<td>12시</td>
+	</tr>
+	</table>
+
+	<hr>
+<!-- 두번째 테이블 -->
+	<table id="t2" border="0" width="650" cellpadding="10" cellspacing="1" bgcolor="#ff9900" >
+		<caption>퇴실 연장요금 안내</caption>
+		<tr>
+			<th colspan="2" rowspan="2">구분</th>
+			
+			<th colspan="2">퇴실 연장요금</th>
+			
+		</tr>
+		<tr>
+			
+			
+			<th width="25%">회원</th>
+			<th width="25%">비회원</th>
+		</tr>
+		<tr>
+			<td rowspan="2" width="25%">주말/연휴 성수기</td>
+			<td width="25%">11시~14시</td>
+			<td>10,000</td>
+			<td>20,000</td>
+		</tr>
+		<tr>
+			
+			<td>14시~17시</td>
+			<td>20,000</td>
+			<td>40,000</td>
+		</tr>
+		<tr>
+			<td rowspan="2">비수기 주중</td>
+			<td>12시~15시</td>
+			<td>10,000</td>
+			<td>20,000</td>
+		</tr>
+		<tr>
+			
+			<td>15시~17시</td>
+			<td>20,000</td>
+			<td>40,000</td>
+		</tr>
+	</table>
+
+ </body>
+</html>

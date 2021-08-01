@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>animate</title>
+  <style>
+    body > div { margin:20px}
+	div > div {width:100px; height:100px;}
+
+   .ani1 div{   background:red;
+				animation-name:ex1;
+				animation-duration:3s;
+   }
+
+   @keyframes ex1{
+   					from{background:red;}
+					to{background:yellow;}
+	}
+
+	.ani2 div{ position: relative;
+				background:red;
+				animation-name:ex2;
+				animation-duration:5s;
+   }
+
+   	.ani3 div{ position: relative;
+				background:red;
+				animation-name:ex2;
+				animation-duration:5s;
+				animation-delay: 2s;
+				animation-iteration-count:3; /*infinite = 영원히 계속*/
+
+   }
+
+    .ani4 div{ position: relative;
+				background:red;
+				animation-name:ex3;
+				animation-duration:5s;
+				animation-fill-mode:forwards; /*애니메이션 작동후에 마지막 상태로*/
+
+   }
+
+    .ani5 div{ position: relative;
+				background:red;
+				animation-name:ex3;
+				animation-duration:5s;
+				animation-iteration-count:2;
+				animation-direction:alternate; /*전환 - 애니메이션 작동후에 처음 상태로 다시 작동*/
+
+
+   }
+
+    @keyframes ex2{
+   					0% {background:red; left:0px; }
+					25% {background:yellow; left:800px; top:0;}
+					50%  {background-color: blue; left:800px; top:200px;}
+					70%  {background-color: blue; left:0; top:200px}
+					100% {background-color: green;left:0; top:0;}
+	}
+
+    @keyframes ex3{
+   					0% {background:red; left:0px; top:0px;}
+					100% {background: blue; left:800px; top:0px;}
+	}
+
+
+  </style>
+ </head>
+ <body>
+	<div class="ani1">
+		<div>
+		</div>
+	</div>
+
+	<div class="ani2">
+		<div>
+		</div>
+	</div>
+
+	<div class="ani3">
+		<div>
+		</div>
+	</div>
+
+	<hr>
+	<div class="ani4">
+		<div>
+		</div>
+	</div>
+	<div class="ani5">
+		<div>
+		</div>
+	</div>
+ </body>
+</html>

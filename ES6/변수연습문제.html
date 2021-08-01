@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div style="display : none">모달창0</div>
+    <div style="display : none">모달창1</div>
+    <div style="display : none">모달창2</div>
+    
+    <button>버튼0</button>
+    <button>버튼1</button>
+    <button>버튼2</button>
+
+    <script> 
+        var 버튼들 = document.querySelectorAll('button');
+        var 모달창들 = document.querySelectorAll('div');
+         
+
+        // for문 도는 시점과 click 했을때 실행될때 가 다름,....var(전역) 에는 3 값만 들어가 있음 그래서 let은 {} 안에서 유효함 으로 바꿈
+        for (var i = 0; i < 3; i++){
+        
+          버튼들[i].addEventListener('click', function(){
+            모달창들[i].style.display = 'block';
+          });
+        
+        }
+        
+        </script>
+
+</body>
+</html>

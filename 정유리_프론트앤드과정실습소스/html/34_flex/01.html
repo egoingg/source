@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>flex</title>
+  <style>
+   body {padding:30px}
+   .container{ display:flex;
+			background:tan; border:1px solid #222; margin-bottom:50px;
+	}
+
+   .container2{ display:flex; 
+				flex-wrap:wrap;/*너비가 작아지면 안에 이쓴 컨텐츠가 줄바꿈이 된다.*/
+
+			background:#9cccfc; border:1px solid #222; margin-bottom:50px;
+	}
+   .container3{ display:flex;
+   				/*flex-direction:row; 기본
+				flex-direction:row-reverse;
+				flex-direction:column;
+				flex-direction:column-reverse;*/
+				flex-direction:row-reverse;
+				background:#b9d3b4; border:1px solid #222; margin-bottom:50px;
+	}
+
+
+	 .container4{ display:flex; 
+				/* 
+				justify-content:flex-start; 요소를 앞쪽(왼쪽)부터 배치
+				justify-content:flex-end; 요소를 뒤쪽(오른쪽)부터 배치
+				justify-content:center; 안의 요소들이 가운데 배치
+				justify-content:space-between; 요소들 사이에만 여백을 두고 배치 */
+				justify-content:space-around; /*요소들 앞,뒤 요소들 사이에도 모두 여백 */
+			background:#f7d3fa; border:1px solid #222; margin-bottom:50px;
+	}
+
+    div > div{
+					width:100px; height:50px; background:#939393; text-align:center; margin:5px; 
+	}
+  </style>
+ </head>
+ <body>
+ <h1>Flexible Boxes</h1>
+ <div class="container">
+	<div><p>1</p></div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+	<div><p>5</p></div>
+	<div>6</div>
+	<div>7</div>
+ </div>
+
+  <div class="container2">
+	<div><p>1</p></div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+	<div><p>5</p></div>
+	<div>6</div>
+	<div>7</div>
+ </div>
+
+ <div class="container3">
+	<div><p>1</p></div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+ </div>
+
+  <div class="container4">
+	<div><p>1</p></div>
+	<div>2</div>
+	<div>3</div>
+	<div>4</div>
+ </div>
+ </body>
+</html>

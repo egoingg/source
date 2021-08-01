@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+/*기본*/
+* { margin:0; padding:0; box-sizing: border-box; }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:0; }
+
+body { font-family:; font-size:; }
+
+ul li{ float:left; border:1px solid pink; width:250px; height:280px; margin:10px; } 
+
+.box { width:230px; height:230px; text-align:center; line-height:230px; }
+button {padding:5px; margin-bottom:15px;}
+.b1 { background:#cc33ff;}
+.b2 { background:tan;}
+.b3 { background:orange;}
+.b4 { background:silver;}
+.b5 { background:green;}
+.b6 { background:blue;}

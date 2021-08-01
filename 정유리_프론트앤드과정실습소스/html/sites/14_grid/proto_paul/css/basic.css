@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+/*기본*/
+* { margin:0; padding:0; box-sizing: border-box; }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:0; }
+
+ul:after, .sectionIn:after,.quickBanner:after, .product .inner { display: block; content:''; clear: both;}
+
+body { font-family:; font-size:; }
+
+#headerIn{ position: relative; width:1020px; margin:0 auto; }
+h3  {font-size: 30px;  text-align: center; margin-bottom: 60px; }
+
+header { height: 90px; text-align: center; }
+header h1 { width:54px; margin:0 auto;  }
+header .gnb > li{float:left;
+			width:156px; 
+			height:60px; 
+			text-align:center;}
+
+.gnb > li > a{display:block; font-size:16px; font-weight:bold; color:black; padding:15px 0 5px;}
+
+header .quickBanner{position:absolute; top:0; left:0;} 
+header .quickBanner li{float:left; margin-top:21px; margin-right:12px}
+header .quickBanner a{  color:inherit;}
+ 
+
+header .lnb{position:absolute; top:18px; right:0;}
+header .lnb li{float:left; margin-left:10px;}
+header .lnb a {  font-size:11px;
+		         font-weight:bold ;
+		         color:inherit;}
+
+#slides { text-align: center; background: #ccc;}
+.sectionIn { width:1020px; margin:0 auto; padding-bottom: 50px;}
+
+
+.product { background: #ddd; text-align: center;}
+.product > .sectionIn > .menu { margin: auto; text-align: center; }
+.product > .sectionIn > .menu li {  display: inline-block; padding:0 0;}
+.product > .sectionIn > .menu li a {display: inline-block; height: 50px; color:inherit;
+                    line-height: 50px; padding: 0 20px; }
+
+
+.product .inner {}
+.product .inner p { position: relative;; float: left; width:500px; margin-right: 20px; margin-top: 20px;}
+.product .inner p:first-child { margin-top: 0;}
+.product .inner p:nth-child(2) { margin-top: 0;}
+.product .inner p:nth-child(2n) { margin-right: 0;}
+/*.product .inner p strong { position: absolute;  width: 100%;  bottom: 0; left:0; padding: 15px; color: #fff; z-index: 5;}*/
+.product .inner p strong { display: block; padding: 20px; background: #fff;}
+.product .inner img { vertical-align: top;}
+
+
+.award { background: #ddd; text-align: center;}
+.award .sectionIn { position: relative; background: #ddd;}
+.award h3{ position: absolute; top:10%; left:10%; background:none;}
+.award p {position: absolute; top:25%; left:30%}
+
+
+.event { background: #ddd; text-align: center; }
+/*.eventBox li { float: left; height: 100px; background: #fff; width: 310px; margin:40px 10px 40px; }*/
+.eventBox { display: flex;}
+.eventBox li {height: 200px; margin-right: 2%; background: #ccc;}
+.eventBox li.s1 {  flex:1;}
+.eventBox li.s2 {  flex:2; }
+.eventBox li.s3 {  flex:2; }
+.eventBox li.s4 {  flex:1; margin-right: 0;}
+
+
+.app { background: #ddd; text-align: center; }
+.appBox { display: flex;}
+.appBox li {height: 200px; margin-right: 2%; background: #ccc;}
+.appBox li.s1 {  flex:1;}
+.appBox li.s2 {  flex:1; }
+.appBox li.s3 {  flex:1; margin-right: 0;}
+
+footer{background: #ccc;}
+.footerIn{ width:1020px; margin:0 auto; padding: 60px;}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Filter</title>
+  <style>
+   div {width:980px; margin:30px auto;}
+   div img{margin:10px;}
+
+   img:nth-child(1){}
+   img:nth-child(2){filter:blur(5px);}
+   img:nth-child(3){filter:brightness(200%);}	/* 밝기		: 0% -블랙			, 100%		- 기본 */
+   img:nth-child(4){filter:contrast(0);}		/* 대비		: 0 - 회색(채도0)		, 1(100%)   - 기본 */
+   img:nth-child(5){filter:grayscale(100%);}	/*            1 - 블랙(100%)		, 0			- 기본 */
+   img:nth-child(6){filter:hue-rotate(180deg);} /* 원형 색상표에서 보색(반대되는 색) */
+   img:nth-child(7){filter:invert();}           /* 0~1(100%) - 색상 & 명도를 반대로 */
+   img:nth-child(8){filter:opacity(0.5);}		/* 투명도     : 0(완전 투명), 1(100% 불투명) */
+   img:nth-child(9){filter:saturate(0);}		/* 채도       : 0(채도 업음), 1(100% 원본 동일) */
+   img:nth-child(10){filter:sepia(1);}			/* 세피아톤     :0~1(100%) */
+   img:nth-child(11){filter:drop-shadow(10px 5px 10px green);}
+  </style>
+ </head>
+ <body>
+	<div>
+		<img src="pineapple.jpg" alt="pineapple">
+		<img src="pineapple.jpg" alt="pineapple">
+		<img src="pineapple.jpg" alt="pineapple">
+		<img src="pineapple.jpg" alt="pineapple">
+		<img src="pineapple.jpg" alt="pineapple">
+		<img src="pineapple.jpg" alt="pineapple">
+		<img src="pineapple.jpg" alt="pineapple">
+		<img src="pineapple.jpg" alt="pineapple">
+		<img src="pineapple.jpg" alt="pineapple">
+		<img src="pineapple.jpg" alt="pineapple">
+		<img src="pineapple.jpg" alt="pineapple">
+	</div>
+ </body>
+</html>

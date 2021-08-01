@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/*기본*/
+* { margin:0; padding:0;  }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:0; }
+
+body { font-family:Tahoma,"맑은 고딕",Arial,sans-serif; font-size:16px; background:tan; }
+
+header{background:#fff;}
+header h1{ width:960; margin:auto; height:80px; line-height:80px; border:1px solid black}
+.on { color:red; text-decoration:underline; }	
+
+#page_main{background:#cc3366;padding: 100px 0;}
+#tab_wrap{ width: 450px; margin: auto; border: 2px solid red;}
+    .tab {overflow: hidden} 
+    .tab li {float: left; width: 150px; height: 40px; text-align: center; line-height: 40px; background: pink; color: white; border: 1px solid red; box-sizing: border-box; cursor: pointer} 
+    .tab li.select {background: white; color: black;} /* class select  지정*/
+
+    .content {}
+    .content div {padding:50px; box-sizing: border-box;}
+    .content div:nth-child(1){ background: orangered;}
+    .content div:nth-child(2){ background: yellow;}
+    .content div:nth-child(3){ background: green;}
+
+    .content img {max-width:100%; }
+
+footer{width:960; margin:auto;padding-top:20px;
+		text-align:right}
+footer small{}

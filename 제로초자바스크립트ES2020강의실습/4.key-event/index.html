@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>안녕하셍</h4>
+    <script>
+        //키 이벤트 
+        window.addEventListener('keyup', (e) => {
+            if (e.key === 'ArrowUp') {
+                console.log('ArrowUp', e)
+            } else if (e.key === 'ArrowDown') {
+                console.log('ArrowDown', e)
+            } else if (e.key === 'ArrowLeft') {
+                console.log('ArrowLeft', e)
+            } else if (e.key === 'ArrowRight') {
+                console.log('ArrowRight', e)
+            }
+
+            let a = 'age'
+
+            const user = {
+                name: '111',
+                [a]: 20
+            }
+
+            const user = {
+                [1 + 4]: 5,
+                ['안녕' + '하세요']: '안녕하세요'
+            }
+        })
+    </script>
+</body>
+
+</html>

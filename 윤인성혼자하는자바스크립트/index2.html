@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    const load = () => {
+      const data = localStorage.getItem('애플리케이션')
+      if (data !== null) {
+        const [color, message] = data.split(',')
+        return {
+          color: color,
+          message: message
+        }
+      } else {
+        return {
+          color: 'red',
+          message: ''
+        }
+      }
+    }
+    const save = (data) => {
+      localStorage.setItem('애플리케이션', `${data.color},${data.message}`)
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // 요소 가져오기
+      const p = document.querySelector('p') 
+      const button = document.querySelector('button') 
+      const input = document.querySelector('input')
+      const select = document.querySelector('select')
+      
+      // 초기 실행
+      const data = load()
+      p.textContent = `이전 실행 때의 마지막 값: ${data.message}`
+      input.value = data.message
+      document.body.style.backgroundColor = data.color
+      select.value = data.color
+ 
+      // 이벤트 연결
+      button.addEventListener('click', () => { 
+        // 데이터를 모두 지우고!
+        data.color = 'red'
+        data.message = ''
+        save(data)
+        // 입력양식 초기화!
+        select.value = 'red'
+        input.value = ''
+      })
+      input.addEventListener('keyup', () => { 
+        data.message = input.value
+        save(data)
+      })
+      select.addEventListener('change', () => {
+        const color = select.options[select.selectedIndex].value
+        // 입력 양식 반영
+        document.body.style.backgroundColor = color
+        // 데이터를 저장
+        data.color = color
+        save(data)
+      })
+    })
+  </script>
+</head>
+<body>
+  <p></p>
+  <button>지우기</button>
+  <input type="text" name="" id="">
+  <select name="" id="">
+    <option value="red">빨간색</option>
+    <option value="blue">파란색</option>
+    <option value="green">초록색</option>
+  </select>
+</body>
+</html>

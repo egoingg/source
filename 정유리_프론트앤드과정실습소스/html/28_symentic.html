@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>기본구조</title>
+  <style>
+  *{margin:0; padding:0;}#ccffff
+  header, nav,#content, footer{ border:2px solid gray; margin:20px; padding:20px;}
+  li{list-style:none;}
+  nav li{display:inline;} /*메뉴를 가로로 놓기 위해 block형식의 li를 inline로 변경*/
+
+  #content{overflow:hidden}/*float을 쓰면 부모(#content) 깨지는데 이것을 막기 위해 overflow:hidden을 쓴다*/
+  main, aside{border:2px solid #cccc66;padding:20px;}
+  main{ float:left;width:70%;}
+  aside{ float:right;width:20%;}
+
+  section{background:#e3ffc8;}
+
+  section:nth-child(1){margin-bottom:20px}
+
+  </style>
+ </head>
+ <body>
+
+  <header>
+   <h1>아모레퍼시픽</h1>
+  </header>
+
+  <nav>
+   <ul>
+	<li><a href="#">ABOUT US</a></li>
+	<li><a href="#">BRANDS</a></li>
+	<li><a href="#">OUR CULTURE</a></li>
+	<li><a href="#">COMMITMENTS</a></li>
+	<li><a href="#">INVESTORS</a></li>
+	<li><a href="#">NEWS</a></li>
+   </ul>
+  </nav>
+
+  <div id="content">
+		<main>
+			<section>
+				<article>
+				1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed eros commodo, dignissim libero ac, laoreet dolor. Praesent in massa vestibulum, congue libero sed, convallis ligula. Sed eleifend lectus faucibus metus lacinia, quis lacinia justo sollicitudin. Sed ultricies facilisis risus nec iaculis. Fusce sed lectus ipsum. Praesent venenatis eu erat non fringilla. Suspendisse dignissim fringilla tortor eu mollis.
+				</article>
+				<article>
+				2Nunc blandit hendrerit turpis. Fusce placerat consectetur dui, quis pharetra magna ultricies id. Fusce justo felis, commodo eget nisl sed, egestas efficitur libero. Morbi sit amet bibendum mi, eu imperdiet libero. Vivamus sed risus vitae dui venenatis aliquam a non ligula. Suspendisse bibendum risus turpis, at dapibus neque bibendum vel. Aliquam erat volutpat.
+				</article>
+			</section>
+
+			<section>
+				<article>
+				같은 가진 품에 따뜻한 밝은 사랑의 천하를 피가 위하여서. 피가 그들은 황금시대의 없으면 무엇을 있다. 위하여서 있으며, 듣기만 풍부하게 내려온 든 갑 그들의 있다. 찬미를 위하여 끓는 그들은 목숨이 반짝이는 위하여서. 위하여서 피고 찾아다녀도, 피는 위하여 피가 투명하되 무엇이 소담스러운 힘있다. 피가 아니한 인간에 있다. 그들을 풀이 이는 가치를 사막이다. 천자만홍이 것은 너의 아니다. 가는 뼈 피가 원질이 만물은 그들의 그들은 우리 가치를 힘있다. 위하여 풀밭에 못할 품었기 피부가 사는가 싶이 피가 봄날의 황금시대다.
+				</article>
+			</section>
+	   </main>
+	   <aside>
+			<ul>
+				<li>Nunc blandit hendrerit turpis.</li>
+				<li>Nunc blandit hendrerit turpis.</li>
+				<li>Nunc blandit hendrerit turpis.</li>
+				<li>Nunc blandit hendrerit turpis.</li>
+				<li>Nunc blandit hendrerit turpis.</li>
+			</ul>
+	   </aside>
+  </div>
+
+  <footer>
+	<address>&copy; Since 1945 Amorepacific, All Rights Reserved.</address>
+  </footer>
+
+ </body>
+</html>

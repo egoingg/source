@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>하위 선택자(자식선택자, 자손선택자)</title>
+  <style>
+   h1{ font-size:17pt;/*문서내 모든 h1*/
+	   font-family:궁서체;
+   }
+   div h1{text-decoration:underline overline;/*후손(자손 선택자)-div 아래있는 모든 h1*/
+   }
+   li{color:gray;}
+
+   .se{border:2px dashed gray;}
+   .se li{color:red;} /*class se 아래 있는 모든 li*/
+   .se > li{color:yellow;} /*class se 밑아래 있는 li만 --> 바로 밑에 li가 없음 . ul이 있다*/
+
+   div>ul>li>ul>li>ul>li{background:pink;}
+   div>ul>li{color:blue; font-weight:bold;}
+  </style>
+ </head>
+ <body>
+ <h1>여행 준비물 챙기기</h1>
+ <div>
+	<h1>정리 목록</h1>
+	 <ul>
+		<li>비상식량
+			<ul>
+				<li>사탕</li>
+				<li>초코렛</li>
+				<li>라면</li>
+				<li>생수</li>
+			</ul>
+		</li>
+		<li class="se">세면도구
+			<ul>
+				<li>비누</li>
+				<li>칫솔</li>
+				<li>치약</li>
+				<li>샴푸</li>
+				<li>린스</li>
+			</ul>
+		</li>
+		<li>옷
+			<ul>
+				<li>겉옷
+					<ul>
+						<li>야상</li>
+						<li>패딩</li>
+						<li>점퍼</li>
+					</ul>		
+				</li>
+				<li>하의</li>
+				<li>상의</li>
+				<li>속옷</li>
+			</ul>		
+		</li>
+		<li>기타</li>
+	 </ul>
+ </div>
+
+ </body>
+</html>

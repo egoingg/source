@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>고급선택자</title>
+  <style>
+  /*  전체 선택자 - 모든 html 태그 선택자에 적용*/
+  *{margin:0; padding:0;}
+
+  body{background-color:#ccffcc;}
+
+  #container{width:900px; margin:100px auto; background-color:#fff;}
+
+  li{list-style:none; padding-left:20px;}
+
+  /*  그룹 선택자 - 선택자 여러개를 동일하게 적용*/
+  h1,h2{padding-top:30px;text-decoration:underline;}
+  p,ul{margin-bottom:20px;}
+
+  /*  특정 선택자 - 특정 선택자에만 적용된 클라스 (중간에 여백없음)*/
+  span.red{color:red;}
+
+  /*  속성값 여러개 동시에 적용*/
+  .lines{text-decoration:line-through underline;}
+
+  a{text-decoration:none;}
+  a:link{color:green;} /* 한번도 방문 안한 링크 표시 */
+  a:visited{color:orange;} /* 한번이라도 방문 링크 표시 */
+  a:hover{color:red ;text-decoration:underline; font-weight:bold;} /* 마우스를 올려 놨을때 */
+  a:active{background:black;} /* 마우스를 꾹 눌렀을때 */
+
+  /* 마우를 드래그해서 선택 했을때 */
+  ::selection{background:green; color:#fff;}
+
+/*가상 요소*/
+  /*지정된 선택자의 첫번째 글자 선택*/
+  p::first-letter{font-size:200%; color:pink;}
+  /*지정된 선택자의 첫번째 줄 선택*/
+  p::first-line{ color:#33ccff;}
+  p::before{content:"★"} /*지정된 선택자의 제일 앞 부분에 내용을 생성함 */
+  p::after{content:"========================"} /*지정된 선택자의 제일 뒷 부분에 내용을 생성함 */
+  
+  /*똑같은 선택자 속성이 겹칠때 뒤에 나오는 속성이 적용*/
+  b{color:Magenta;}
+  b{color:OliveDrab;} 
+
+  div i{color:red}
+  i{color:blue} /*상세하게 나열헌 */
+
+
+  div u{background:yellow;}
+  u{background:gray !important}
+
+  </style>
+ </head>
+ <body>
+ <div id="container">
+	<h1 class="red">Lorem ipsum dolor sit amet</h1>
+	<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a ex nec mi tincidunt euismod sit     amet nec turpis. <span class="red lines">클라스 동시에 적용 Integer iaculis velit odio, vel tempor quam congue id. Vivamus laoreet purus augue,</span> ut  porta tortor laoreet ac. Donec volutpat dapibus rhoncus. Curabitur ac tellus hendrerit, tincidunt enim   sit amet, ultrices tortor. <span class="lines">Aenean venenatis euismod velit a pharetra.</span> Nunc vitae lectus vel eros rutrum  pharetra.
+	</p>
+
+	<h2>Fusce congue</h2>
+	<p>
+	Fusce congue, risus at imperdiet consequat, magna dui mollis erat, vel tristique quam nunc sed ipsum.  Pellentesque volutpat rhoncus luctus.<span> Curabitur vehicula a massa et porta. Quisque id malesuada tellus, vitae tempor velit.</span> Phasellus sagittis ante in lacus elementum, at facilisis dolor congue. <b>Fusce non egestas ex.</b> Nam vehicula vitae velit vel volutpat. Praesent mi nisl, congue nec augue ut, pretium posuere purus. Phasellus bibendum felis eget orci efficitur, ac ultricies ante dignissim. <b>Donec at blandit turpis.</b>
+	</p>
+
+
+	<ul>
+		<li class="red lines">Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li><a href="https://www.naver.com/">네이버</a></li>
+		<li><a href="https://www.gangnam.go.kr/">강남구청</a></li>
+		<li><a href="https://www.samsung.com/">삼성전자</a></li>
+		<li><a href="https://www.hyundai.com/">현대자동차</a></li>
+	</ul>
+
+	<p>
+	 Suspendisse venenatis tellus at augue facilisis, <b>non placerat purus hendrerit.</b> Morbi eros massa, viverra sit amet turpis id, tincidunt tempus augue. Pellentesque tincidunt eu felis et suscipit. Donec sed ultricies nunc, a accumsan elit. Donec ante turpis, dignissim vel enim vel, porttitor commodo lorem. <span class="red">Donec in vehicula ante. Sed rutrum turpis vitae sem mattis, sed imperdiet felis convallis. Vestibulum eget gravida neque. Etiam iaculis, elit quis tincidunt placerat, turpis erat rhoncus tellus, in euismod leo risus eget leo.</span> Nunc urna nulla, venenatis a gravida ut, fermentum ac nisl.
+	</p>
+
+	<div>
+	 venenatis tellus at augue facilisis, <u>non placerat purus hendrerit.</u> <i>Morbi eros massa,</i> viverra sit amet turpis id, tincidunt tempus augue. Pellentesque tincidunt eu felis et suscipit. Donec sed ultricies nunc, a accumsan elit. Donec ante turpis, dignissim vel enim vel, porttitor commodo lorem. <i>Donec in vehicula ante. Sed rutrum turpis</i> vitae sem mattis, sed imperdiet felis convallis. <u>Vestibulum eget gravida neque.</u> Etiam iaculis, elit quis tincidunt placerat, turpis erat rhoncus tellus, <b>in euismod leo risus eget leo. Nunc urna nulla, venenatis a gravida ut, fermentum ac nisl.</b>
+	</div>
+
+ </div>
+ </body>
+</html>

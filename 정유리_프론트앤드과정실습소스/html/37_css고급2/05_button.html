@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>버튼</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <style>
+	* { margin:0; padding:0; }
+	body{ font-family:sans-serif; margin:100px 0;}
+	li { list-style:none; }
+	a { text-decoration:none; }
+	img { border:0; }
+	label {display:inline-block;}
+	h3{ display:inline-block; width:130px; margin-left:100px;}
+
+	body > div {border-bottom:1px solid #ccc; height:80px;padding-top:30px;}
+	input[type="checkBox"] {display:none;}
+  </style>
+ </head>
+
+ <body>
+  <!-- 햄버거 버튼-->
+  <div id="hamBtn">
+	<h3>menu / close</h3>
+	<input type="checkbox" id="hamB">
+	<label for="hamB" class="hamB_la">
+		<span></span>
+		<span></span>
+		<span></span>
+	</label>
+  </div>
+  <style>
+
+  #hamBtn { } /*div*/
+  #hamB {}/*check box*/
+    .hamB_la {position:relative; width:25px; height:18px; } /*label*/
+	.hamB_la span {position:absolute; /*span 모두*/
+					display:inline-block; 
+					width:25px;  
+					height:2px; background:#000;
+					transform-origin:1px 1px; /*중심축(50% 50% 기본)*/
+					transition:0.5s
+					
+	}
+
+	.hamB_la span:nth-child(1) {}
+	.hamB_la span:nth-child(2) { top:50%; transform:translateY(-50%)}
+	.hamB_la span:nth-child(3) { bottom:0;}
+
+
+	#hamB:checked + .hamB_la span:nth-child(1) {transform:rotate(45deg);}
+	#hamB:checked + .hamB_la span:nth-child(2) {opacity:0}
+	#hamB:checked + .hamB_la span:nth-child(3) {transform:rotate(-45deg);} /*마이나스는 시계반대방향*/
+  </style>
+
+  <!-- 입체 버튼-->
+  <div id="upDownBtn">
+	<h3>Up / Down</h3>
+	<input type="checkbox" id="upB">
+	<label for="upB" class="upB_la">BUTTON</label>
+  </div>
+
+  <style>
+  #upDownBtn{}/*div*/
+  #upB{}/*check*/
+  .upB_la{padding:10px 20px;
+			background:#0eb3f1; color:white; /*label*/
+			border-radius:10px;
+			border-bottom:5px solid #1b5e85; 
+			transition:0.5s}
+			
+	#upB:checked + label{transform:translateY(5px); border-bottom-width:1px; }
+
+  </style>
+
+  <!-- On/Off 버튼-->
+  <div id="onOffBtn">
+	<h3>On/Off</h3>
+	<input type="checkbox" id="onOff">
+	<label for="onOff" class="onOff_la">
+	    <span>ON</span>
+	    <span>OFF</span>
+		<span class="btn"></span>
+	</label>
+  </div>
+  <style>
+	#onOffBtn{} /*div*/
+	#onOff{}/*check*/
+	.onOff_la{ position:relative; /*label*/
+				overflow:hidden;
+				width:120px; height:40px; background:#898989; border-radius:20px;
+				transition:0.5s}
+
+
+	.onOff_la span{position:absolute;
+					top:50%;
+					transform:translateY(-50%);
+					color:white; 
+					transition:0.5s} /*span*/
+	
+	.onOff_la span:nth-child(1) { left:-70%;} /*on span*/
+	.onOff_la span:nth-child(2) { right:20%} /*off span*/
+
+	.onOff_la .btn{ margin:0 2px; /*--처음값--*/
+					width:36px; height:36px; background:#00ccff; box-sizing:border-box;/*둥근 span*/
+					border-radius:20px; border:2px solid white; 
+					
+					}
+	
+
+	#onOff:checked + label{ background:tan;}
+	#onOff:checked + label span:nth-child(1){left:20%} /*on span*/
+	#onOff:checked + label span:nth-child(2){right:-70%}/*off span*/
+	#onOff:checked + label .btn{ margin-left:82px}/*--변했을때 값(checked 햇을대 trans먹히게)--*/
+  </style>
+
+  <!--slideBtn 버튼-->
+  <div id="slideBtn">
+	<h3>slide</h3>
+	<input type="checkbox" id="slideB">
+	<label for="slideB" class="slide_la">
+		<i class="fab fa-facebook-f"></i>
+		<span>페이스북 바로가기</span>
+	</label>
+  </div>
+
+  <style>
+  	#slideBtn{} /*div*/
+	#slideB{}/*check*/
+	.slide_la{ width:30px; height:30px; border-radius:5px; background:#3B5B77;/*label*/
+				overflow:hidden; /*important*/
+				transition:0.5s  /*important*/
+				}
+	.slide_la i {width:30px; line-height:30px; text-align:center; color:#fff; } /*fontawesome*/
+	.slide_la span{ color:#fff; font-size:12px;line-height:30px; }
+	#slideB:checked + label{ width:150px; }
+  </style>
+
+  <!--rotateBtn 버튼-->
+  <div id="rotateBtn">
+	<h3>rotate</h3>
+	<input type="checkbox" id="rotate">
+	<label for="rotate" class="rotate_la">
+		<span>CLICK <i class="fas fa-check"></i></span><!--  앞 -->
+		<span>AGAIN <i class="fas fa-undo"></i></span> <!-- 뒤 -->
+	</label>
+  </div>
+
+  <style>
+	#rotateBtn {}/*div*/
+	#rotate {}/*check*/
+	.rotate_la {position:relative; width:100px; height:50px;/*label*/
+				}
+	.rotate_la span{ position:absolute;width:100%; line-height:50px; /*span all */
+					text-align:center; color:white;
+					transition:0.5s;
+					backface-visibility:hidden; /* 요소의 뒷면을 어떻게 보여줄지 정함 (visible/hidden) */
+	}
+
+	.rotate_la span i {} /* fontsw all */
+
+	.rotate_la span:nth-child(1){background:#0099cc; transform:rotateX(0deg);} /*앞  */
+	.rotate_la span:nth-child(2){background:tan; transform:rotateX(180deg);}/* 뒤  */
+
+	#rotate:checked + label span:nth-child(1){transform:rotateX(180deg);} 
+	#rotate:checked + label span:nth-child(2){transform:rotateX(0deg);} 
+
+
+  </style>
+ </body>
+</html>

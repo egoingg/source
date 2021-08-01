@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>switch</title>
+ </head>
+ <script>
+  var site = prompt("즐겨 사용하는 포털 검색 사이트는?","");
+  var ss;
+
+  switch (site)
+   {
+   	case "네이버": 
+		ss = "naver.com";
+   		break;
+   	case "구글": 
+		ss = "google.com";
+   		break;
+   	case "다음": 
+		ss = "daum.com";
+   		break;
+   	case "네이트": 
+		ss = "nate.com";
+   		break;
+	default:
+   		alert("다른 사이트를 입력하세요");
+   	
+   }
+    
+    if(ss) location.href = "https://www." + ss;
+ </script>
+ <body>
+
+ </body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+   var id = prompt("아이디 입력","");
+   var pw = prompt("패스워드 입력","");
+
+   if ( id == "abc" && pw == "123")
+   {
+		confirm("로그인 성공");
+   }else if( id != "abc" && pw == "123"){
+		alert("아이디가 틀렷어요");
+   }else if( id == "abc" && pw != "123"){
+		alert("비밀번호가 틀렷어요");
+   }else{
+		alert("아이디와 비밀번호가 틀렷어요");
+   }
+
+  </script>
+ </head>
+ <body>
+
+ </body>
+</html>

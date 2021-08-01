@@ -1,0 +1,77 @@
+﻿<!-- 헤더 -->
+
+Display your web design in a web browser
+Fastest way to present your design and get feedback from your clients!       
+  
+Upload Project
+
+Drop here or select your project prepared in the PNG or JPG format
+
+
+
+
+
+<!-- 첫번째 섹션 --> 
+
+Fastest way to present your design
+Symu is an easy to use tool for web designers. With the help of our system you can present your projects in a browser for free. It is all very easy!
+Drop your project anywhere Symu will prepare a mockup of your website for you!
+
+
+
+
+
+<!-- 두번째 섹션 --> 
+
+The simplest way to get feedback from your clients!
+
+You can add a comment anywhere on a project, this is a fast and easy way to gather input and proposed changes from your client. Click anywhere on a project and leave your thoughts.
+Every added comment becomes a task!  Thanks to this solution you can easily mark the changes you have made.
+
+
+
+<!-- 세번째 섹션 -->
+
+Support for Responsive projects
+Projects added to Symu are automatically checked whether they are mobile ready.
+The program will divide your files into responsive versions on its own! You have the option to view the projects in either normal or responsive modes!
+
+
+
+
+
+<!-- 네번째 섹션 --> 
+
+Email notifications
+An email notification will be sent when your client comments or opens a project. You will know when a client recieves the projects and if he has seen it!
+
+
+Project protection
+Your projects will be perfectly safe, Symu uses SSL encryption and every project added receives a unique link. Additionally you have the option to secure your project with a password.
+
+
+
+<!-- 다섯번째 섹션 -->
+
+253
+Todays uploads
+
+
+171092
+Projects uploaded
+
+
+Sign Up no
+
+931523
+Project views
+
+
+
+100867
+Comments posted
+
+
+<!-- 푸터 -->
+
+The site owner is not responsible for uploaded images. You can only upload images for which you own the copyright.

@@ -1,0 +1,11 @@
+.result {
+  margin: auto;
+  padding: 30px;
+  background: darkgrey;
+  border: 2px solid gray;
+  border-radius: 10px;
+}
+
+p.bold {
+  font-weight: bold;
+}

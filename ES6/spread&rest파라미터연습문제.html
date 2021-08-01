@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = [1,2,3]
+        var b= '김밥'
+        var c = [...b, ...a] //['김','밥', 1,2,3]
+        console.log(c)
+
+
+        var a = [1,2,3]
+        var b = ['you', 'are']
+        var c = function(a,b){
+            console.log ( [ [...a], [...b] ][1]) // [ [1,2,3], ['you', 'are'] ] [1] = ['you', 'are'] 
+            console.log (  [...a], [...b] ) //  [1,2,3],['you', 'are']  
+            console.log (  [...a,...b] ) //  [1,2,3],['you', 'are']  
+        }
+
+        c(a,b);
+
+
+       function test(a,b,c)
+       {
+            console.log(a+b+c)
+       }
+
+       let arr = [1,2,3]
+       test(...arr)
+
+
+       function 함수(a=5, b=a*2)
+       {
+           console.log(a+b)
+           return 10
+       }
+       함수(3);
+
+       function 함수(a=5, b= a*2){
+           console.log(a+b)
+       }
+       함수(undefined,undefined)
+
+       function 어레이(...파라미터들){
+            return 파라미터들
+       }
+
+       var newArray = 어레이(1,2,3,4,5)
+       console.log(newArray)
+
+
+       var numbers = [2,3,4,5,6,1,3,2,5,5,4,6,7];
+      console.log( Math.max(...numbers) )
+
+
+      function 정렬(param){
+        //console.log(param.split('').sort())
+        let a = [...param].sort();
+        console.log("정렬:",a.join())
+    }
+
+    var str = 'bear'
+    정렬(str)
+   // console.log (정렬(str)); 
+
+
+
+  // 글자세기(‘aacbbb’) 라고 입력하면 콘솔창에
+
+//{ a : 2, b : 3, c : 1 }
+
+ function 글자세기(param)
+ {
+     let a,b,c =0;
+     let result = {}
+     let pm = [...param].sort()   
+     pm.forEach(val => {
+         console.log('val:', result[val])
+        if (result[val] > 0)
+         result[val] = result[val] +1
+         else
+         result[val] = 1
+     });
+
+     console.log(result)
+ }
+글자세기('aacbbb');
+
+
+// var 이름1 = {name: '김'}
+
+// function 변경(obj) {
+//     obj = {name: 'bark'}
+//     console.log(obj)
+//     console.log(이름1)
+// }
+
+// 변경(이름1)
+
+var a = '김'
+
+function 변경(o) {
+   o  = 'd'
+    console.log(o)
+    console.log(a)
+}
+
+변경(a)
+
+var 이름1 = { name : '김' };
+
+function 변경(obj){
+  obj.name  = 'park';
+}
+
+변경(이름1);
+console.log(이름1);
+
+var obj = {
+    name : 'hat',
+    price : 70000,
+    부가세() {
+        console.log( this.price * 0.1)
+    }
+}
+
+obj.부가세()
+
+
+//constructor
+function product(이름, 가격) {
+    this.name = 이름
+    this.price = 가격
+    this.부가세 = function() {
+        console.log( this.price * 0.1)
+    }
+}
+
+var prd1 = new product('shirts',50000)
+var prd2 = new product('pants',60000)
+
+prd1.부가세()
+
+function 기계(){
+  this.name = 'Kim';
+  this.age = 15;
+}
+기계.prototype.gender = '남';
+
+var 학생1 = new 기계();
+
+function 학생(pm1, pm2){
+    this.name = pm1
+    this.age = pm2
+    this.sayHi = function(){
+        console.log(`안녕나는 ${this.name}이야`)
+    }
+}
+
+var 학생1 = new 학생('kim', 20)
+var 학생2 = new 학생('park', 20)
+var 학생3 = new 학생('lee', 20)
+
+function Parent(){
+    this.name = 'kim'
+}
+
+var a = new Parent();
+a.__proto__.age = 30
+console.log(a.age)
+
+var arry = [1,2,3]
+Array.prototype.remove3 = function(val){
+  
+  let i = this.indexOf(val)
+  if (i>= 0) arry.splice(i,1)
+}
+
+arry.remove3(3)
+console.log('arry:',arry) //[1,2]
+
+    </script>
+
+</body>
+</html>

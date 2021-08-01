@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>함수,event</title>
+  <style>
+	div { border:2px solid red; width:100px; }
+  </style>
+
+  <script>
+	var i=0;
+	var color = ["tan","red","silver","pink","aqua","gold","palevioletred","green"];
+
+	function changeColor(){
+		i++; // i=i+1
+
+		if (i >= color.length)
+		{ 
+			i=0;
+		}
+		var elbb = document.getElementById("bb");
+		elbb.style.backgroundColor= color[i];
+    }
+	function aw(){
+		alert("함수 aaa 지정!");
+	}
+
+	
+  </script>
+ </head>
+ <body id="bb">
+	<button onclick="changeColor()">배경색 바꾸기</button><br><br>
+	<div onclick="javascript:alert('click했어요')">클릭</div><br> <!-- javascript:생략가능 -->
+	<a href="javascript:aw();">클릭</a>
+ </body>
+</html>

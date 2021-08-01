@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>bacground</title>
+  <style>
+	div {float:left; width:400px; height:200px; border:1px solid gray; margin:30px;
+		background-repeat:no-repeat;
+		background-position:center;
+	}
+	.vertical{width:200px; height:400px;}
+
+    .bg01{ background-image:url(bg/h.jpg); background-size:contain;} /*contain = 이미지기준 / 완전히 보이도록 */
+    .bg02{ background-image:url(bg/v.jpg); background-size:contain; }
+    .bg03{ background-image:url(bg/h.jpg); background-size:contain; }
+	.bg04{ background-image:url(bg/v.jpg); background-size:contain; }
+
+	.bg05{ background-image:url(bg/h.jpg); background-size:cover;}/*cover = 바탕기준 / 잘려도 전체 덮이도록*/
+    .bg06{ background-image:url(bg/v.jpg); background-size:cover; }
+    .bg07{ background-image:url(bg/h.jpg); background-size:cover; }
+	.bg08{ background-image:url(bg/v.jpg); background-size:cover; }
+
+  </style>
+ </head>
+ <body>
+ <h2>Background-size: contain</h2>
+ <div class="bg01"></div>
+ <div class="bg02"></div>
+ <div class="bg03 vertical" style="clear:both"></div>
+ <div class="bg04 vertical"></div>
+
+
+<hr style="clear:both">
+ <h2>Background-size: cover</h2>
+ <div class="bg05"></div>
+ <div class="bg06"></div>
+ <div class="bg07 vertical" style="clear:both"></div>
+ <div class="bg08 vertical"></div>
+
+ </body>
+</html>

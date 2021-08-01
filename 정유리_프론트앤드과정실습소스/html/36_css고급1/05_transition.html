@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>transition</title>
+  <style>
+  	section { width:400px; height:400px; margin:50px auto}
+	section .circle {width:400px; height:400px; border:2px solid #000;
+					background:url("02.jpg");
+					
+					transition:2s all ease-in 0.3s;
+					}
+	
+	section:hover .circle{background:url("01.jpg"); border-radius:50%}
+	
+	.opa { width:400px; height:400px; margin:50px auto; cursor:pointer; background:yellow}
+	.opa img{ transition:1s all ease-in; }
+	.opa:hover img{ opacity:0.2; }
+
+
+  </style>
+ </head>
+ <body>
+ <section>
+	<div class="circle"></div>
+ </section>
+
+ <div class="opa"><img src="01.jpg" alt="room"></div>
+ </body>
+</html>

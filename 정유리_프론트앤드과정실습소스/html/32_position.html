@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>position2</title>
+  <style>
+  header{position:relative;
+		 width:800px;height:200px;margin:auto; background:#ccff99}
+  section{position:relative;
+			width:800px;height:600px;margin:30px auto; background:#ccffcc}
+
+  .box1,.box2{width:150px; height:100px; }
+
+  .box1{position:absolute;top:50px;left:20px; 
+		background:#00cc66 }
+  .box2{position:absolute; bottom:70px;right:50px; 
+		background:#0099ff}
+
+  .box3{position:absolute; width:300px;height:300px; top:50px; left:50px; 
+		background:#00cc66 }
+  .box4{position:absolute; width:350px;height:500px; bottom:50px; right:50px; 
+		background:#0099ff}
+  </style>
+ </head>
+ <body>
+ <header>
+ 	<div class="box1">1</div>
+	<div class="box2">2</div>
+ </header>
+ 
+ <section>
+ 	<div class="box3">3</div>
+	<div class="box4">4</div>
+ </section>
+ </body>
+</html>

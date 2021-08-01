@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>switch</title>
+  <script>
+   var subj = prompt("국,영,수,과,사 중에 알고 싶은 점수는?","");
+   var result;
+   switch (subj)
+   {
+	case "국": 
+		result = 55;/*실행문*/
+		break;
+	case "영": 
+		result = 65;/*실행문*/
+		break;
+	case "수": 
+		result = 75;/*실행문*/
+		break;
+	case "과": 
+		result = 85;/*실행문*/
+		break;
+	case "사": 
+		result = 95;/*실행문*/
+		break;	
+	default: 
+		result ="해당 사항없는 과목";
+	
+   }
+
+   document.write(subj +"점수는" + result +"입니다.")
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

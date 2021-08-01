@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+	* { margin:0; padding:0;   box-sizing: border-box; }
+	li { list-style:none; }
+	a { text-decoration:none; }
+	img { border:0; }
+	li { list-style:none; }
+
+	nav {  width:950px; height:300px; border:1px solid black}
+	nav>ul {}
+	nav>ul >li {float:left}
+	nav>ul >li > a {display:inline-block; padding:3px; border:1px solid black}
+
+
+ /*--add 
+
+ add end --*/
+/* 	ul.sub { position:absolute; top:38px; dispaly:none;}
+	ul.sub li{float:left}
+	ul.sub a {font-size:13px; color:#333; line-height:40px}
+	ul.sub a:hover {color:red; text-decoration:underline;}
+	
+	ul.sub{display:none;}
+	li:hover ul.sub{display:block;} */
+
+	ul.sub {position:absolute; top:38px;} 
+	ul.sub li {float:left} 
+	ul.sub > a {display:inline-block;padding:5px; border:1px solid blue}
+	ul.sub > a:hover {color:red; text-decoration:underline;}
+
+	ul.sub {display:none}
+    li:hover ul.sub {display:block}
+
+ 	/*ul.sub sub1 {left:50px;}
+ 	ul.sub sub2 {left:40px}
+ 	ul.sub sub3 {left:70px}  안먹힘*/
+
+	
+	
+
+
+
+  </style>
+ </head>
+ <body>
+ <header>
+    
+  </header>
+  <nav>
+    <ul>
+      <li><a href="">news
+        <ul class="sub sub1">
+          <li><a href="">news1</a></li>
+          <li><a href="">news2</a></li>
+          <li><a href="">news3</a></li>
+        </ul>
+       </a></li>
+      <li><a href="">opinian
+         <ul class="sub sub2">
+          <li><a href="">opinian1</a></li>
+          <li><a href="">opinian2</a></li>
+          <li><a href="">opinian3</a></li>
+        </ul>        
+       </a></li>
+      <li><a href="">sports
+         <ul class="sub sub3">
+          <li><a href="">sports1</a></li>
+          <li><a href="">sports2</a></li>
+          <li><a href="">sports3</a></li>
+        </ul>        
+        </a></li>
+    </ul>
+  </nav>
+  <section></section>
+  <footer></footer>
+
+ </body>
+</html>

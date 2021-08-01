@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>날짜 정보 객체</title>
+  <script>
+   var today = new Date();
+   var ttt = today.getFullYear();
+
+   document.write("<h1>오늘 날짜 정보</h1>");
+   document.write("현재 연도: " +ttt+ "년<br>");
+   document.write("현재 월은: " +(today.getMonth()+1) + "월<br>");
+   document.write("현재 일은: " +today.getDate() + "일<br>");
+   document.write("현재 요일은: " +today.getDay() + "번째 요일<br>");
+
+   document.write("<h1>현대 시간 정보</h1>");
+   document.write("현재 시: " +today.getHours()+ "시<br>");
+   document.write("현재 분: " +today.getMinutes()+ "분<br>");
+   document.write("현재 초: " +today.getSeconds()+ "초<br>");
+
+   document.write("<h1>올해 남은 날짜</h1>");
+   var lastDay = new Date(ttt, 1,27); //마지막 날 날짜 
+   var diffDay = lastDay.getTime() - today.getTime();//getTime() : 초 단위로 시간을 가져오는 함수 
+
+   var dd = Math.ceil(diffDay / (1000*60*60*24)); //1초 = 1000 msc ,1분= 60초 , 1시간= 60분,1일 =24시간
+   //Math.ceil  : 소수점 첫째자리에서 무조건 올림 (정수로 출력) 
+   //Math.floor : 소수점 첫째자리에서 무조건 내림 (정수로 출력)
+   //Math.round : 소수점 첫째자리에서 반올림  (정수로 출력)
+   
+   document.write("D-Day:올해는" +dd+"일 남았습니다.");
+
+  </script>
+ </head>
+ <body>
+	<a href="06_history.html">window_link</a><br><br>
+	<a href="javascript:history.back();">이전페이지로 가기</a>
+ </body>
+</html>

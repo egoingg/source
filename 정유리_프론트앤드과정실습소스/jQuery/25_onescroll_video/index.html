@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+     <meta charset="UTF-8">
+	 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	 <meta name="viewport" content="width=divice-width,initial-scale=1.0,maximum-scale=1.3">
+     <title>oneScroll</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> <!-- animate css 추가 -->
+     <link href="css/basic.css" rel="stylesheet">
+	 <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/wow.min.js"></script>
+	 <script src="js/main.js"></script>
+  
+   </head>
+   <body>
+      <div id="btn_box">
+         <ul>
+            <li><a href="#s1" class="btnBox1">1</a></li>            
+            <li><a href="#s2" class="btnBox2">2</a></li>
+            <li><a href="#s3" class="btnBox3">3</a></li>
+            <li><a href="#s4" class="btnBox4">4</a></li>
+            <li><a href="#s5" class="btnBox5">5</a></li>
+            <li><a href="#s6" class="btnBox6">6</a></li>   
+         </ul>
+      </div>
+
+      <header>
+         <h1>OnescrolPage</h1>
+         <ul class="nav">
+            <li><a href="#s1" class="btn1">HOME</a></li>            
+            <li><a href="#s2" class="btn2">ABOUT US</a></li>
+            <li><a href="#s3" class="btn3">PORTFOLIO</a></li>
+            <li><a href="#s4" class="btn4">PROFILE</a></li>
+            <li><a href="#s5" class="btn5">CONTACT</a></li>
+            <li><a href="#s6" class="btn6">BOARD</a></li>                                                            
+         </ul> 
+      </header>
+
+      <section id="s1">
+         <video id="videoBg" autoplay loop muted poster="bg/dew.jpg">
+            <source src ="bg/dew.webm" type="video/webm">
+            <source src ="bg/dew.mp4" type="video/mp4"> 
+         </video>
+         <!-- animate__animated animate__bounceInDown -->
+         <div class="introTitle animate__animated animate__bounceInDown"> 
+            <h1>YOOL'S <br> PORTFOLIO</h1>
+            <p>이 사이트는 포트폴리오 연습용 사이트입니다.</p>
+         </div>
+      </section>
+
+      <section id="s2">
+         <h2 class="wow animate__animated animate__zoomInUp">ABOUT US</h2>
+      </section>
+
+      <section id="s3">
+         <h2 class="wow animate__animated animate__rollIn">PORTFOLIO</h2>
+      </section>
+
+      <section id="s4">
+         <h2 class="wow animate__animated animate__rotateInDownRight">PROFILE</h2>
+      </section>
+
+      <section id="s5">
+         <h2 class="wow animate__animated animate__hinge">CONTACT</h2>
+      </section>
+
+      <section id="s6">
+         <h2 class="wow animate__animated animate__rotateInDownRight">BOARD</h2>
+      </section>
+
+      <footer>
+         <a href="#" class="top">페이지 위로 가기</a>
+      </footer>
+   </body>
+</html>

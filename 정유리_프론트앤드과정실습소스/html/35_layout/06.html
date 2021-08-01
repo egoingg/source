@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>layout5</title>
+  <style>
+   *{margin:0; padding:0;box-sizing:border-box;}
+   li{list-style:none;}
+
+   #wrap{max-width:1200px; margin:20px auto;}
+
+	#header, #footer{position:relative; height:80px; background:#ddd;padding:10px;}
+	#header > ul{position:absolute; top:40px; right:20px; overflow:hidden; border:2px solid gray;}
+	#header > ul > li{float:left;}
+
+	#main{ margin:10px 0; background:#ddd;}
+	#main > ul{	}
+	#main > ul > li{ float:left;width:180px; height:200px; margin:10px; background:tomato;}	
+
+	#main::after{display:block; content:""; clear:both;}
+
+  </style>
+ </head>
+ <body>
+ <div id="wrap">
+
+  <div id="header">
+	<h1>HEADER</h1>
+	<ul>
+		<li>MENU1 |&nbsp;</li>
+		<li>MENU2 |&nbsp;</li>
+		<li>MENU3 |&nbsp;</li>
+		<li>MENU4 |&nbsp;</li>
+		<li>MENU5 |&nbsp;</li>
+		<li>MENU6</li>
+	</ul>
+  </div>
+
+  <div id="main">
+	<ul>
+		<li>BOX1</li>
+		<li>BOX2</li>
+		<li>BOX3</li>
+		<li>BOX4</li>
+		<li>BOX5</li>
+		<li>BOX6</li>
+		<li>BOX7</li>
+		<li>BOX8</li>
+		<li>BOX9</li>
+		<li>BOX10</li>
+		<li>BOX11</li>
+		<li>BOX12</li>
+	 </ul> 
+
+  </div>
+  <!-------------------#main END---------------------->
+  <div id="footer">
+	   <h1>FOOTER</h1>
+	</div>
+ </div>
+
+ </body>
+</html>

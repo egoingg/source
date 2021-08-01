@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>overflow</title>
+  <style type="text/css">
+   div {width:200px; height:200px; border:3px solid black; margin:30px;
+         display:inline-block;}
+   /*A:nth-of-type(n)-같은 요소 A중에  n번째*/
+   div:nth-of-type(2){ overflow:hidden;}
+   div:nth-of-type(3){ overflow:scroll;}
+   div:nth-of-type(4){ overflow-y:scroll; overflow-x:hidden;}
+   div:nth-of-type(5){ overflow:auto;} /*설정된 크기보다 큰쪽의 스크롤이 생김*/
+
+   div:nth-of-type(5) img{width:140px;}
+
+   p{width:500px; height:200px;border:3px solid #000; background:tan; overflow:auto;}
+  </style>
+ </head>
+ <body>
+ <h2>overflow</h2>
+ <div>
+	<h4>1. 기본상태</h4>
+	<img src="photo.jpg" alt="">
+ </div>
+ <div>
+	<h4>2. overflow - hidden</h4>
+	<img src="photo.jpg" alt="">
+ </div>
+  <div>
+	<h4>3. overflow:scroll;</h4>
+	<img src="photo.jpg" alt="">
+ </div>
+  <div>
+	<h4>4. overflow-y:scroll;overflow-x:hidden;</h4>
+	<img src="photo.jpg" alt="">
+ </div>
+  <div>
+	<h4>5. overflow:auto</h4>
+	<img src="photo.jpg" alt="">
+ </div>
+
+ <hr>
+
+ <p>
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lobortis, nibh in suscipit ullamcorper, ante quam iaculis risus, in tincidunt lectus augue nec est. Nullam facilisis augue magna, ac faucibus nunc dignissim non. Duis at aliquam magna. Cras nec tempus lacus. Nullam malesuada tincidunt finibus. Vivamus efficitur id diam non maximus. In congue placerat ante nec consequat. Pellentesque cursus laoreet eros sit amet tempor. Vestibulum iaculis accumsan turpis, id lobortis ligula lacinia eget. Maecenas ac sapien et orci congue venenatis. Nam egestas dictum nunc ac convallis. Proin nisi eros, ornare eget varius et, laoreet sit amet ligula. Nullam elementum ante nulla, feugiat viverra augue vestibulum non. Suspendisse molestie ligula quis ipsum iaculis, quis dictum nisi imperdiet. In sollicitudin mattis laoreet.<br><br>
+
+ Praesent justo nulla, laoreet eu tellus a, consectetur bibendum nisi. Ut egestas, risus sed auctor fermentum, eros enim scelerisque nisi, vitae porttitor mauris mi non purus. In non est ac orci imperdiet molestie. In consequat eu dui eget pellentesque. Vivamus sit amet magna et dolor interdum dapibus. Pellentesque purus lectus, hendrerit id eleifend id, ultrices sed tortor. Integer ac lectus mi. Sed varius arcu odio, a condimentum metus porttitor ac. Vivamus feugiat turpis ut nunc vulputate, quis venenatis augue sodales. Vivamus molestie risus at diam commodo, a bibendum sapien egestas. Aliquam lacinia nec neque a malesuada. Nunc ut ante id ex lobortis lobortis id ut nunc. Praesent pellentesque ultricies odio, pellentesque lacinia dui mollis eget.<br><br>
+
+ Sed maximus turpis a est consequat ultricies. Nunc porttitor, neque ut sollicitudin elementum, dui velit efficitur lectus, a ultricies felis ante iaculis tellus. In lectus odio, scelerisque ac leo quis, pulvinar faucibus lorem. Aliquam luctus arcu quis lorem bibendum, malesuada aliquet dui facilisis. Aliquam viverra ornare arcu, a lobortis urna mollis non. Suspendisse augue metus, rhoncus quis lacus sed, blandit dapibus erat. Aenean facilisis turpis libero, eu commodo turpis rutrum in. Fusce est ex, commodo eget feugiat eu, imperdiet id mi. Maecenas nec eros magna. Duis sodales vel sem at sodales. Donec eleifend pulvinar odio, et tincidunt nibh porttitor eget.
+ </p>
+
+ </body>
+</html>

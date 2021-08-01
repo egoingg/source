@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>background</title>
+  <style>
+  body {
+		
+        /*background-color:;
+		background-image:;
+		background-repeat:; 
+		background-position:;
+		background-attachment:fixed;*/
+		background-size:100px 50px;
+
+		background:#deffb3 url("bg/bg-img3.png") no-repeat 50% 50% fixed;
+		
+    }
+  div{ width:600px; height:600px; border:2px solid gray;  
+		background-image:url("bg/apple.png");
+		background-repeat:repeat-x;/*repeat-x, repeat-y, no-repeat*/
+		background-position:bottom;
+	}
+
+  .list1 li{ 
+			list-style-type:circle;
+			list-style-position:inside;
+			color:green;
+		}
+  .list2 li{
+  			list-style-image:url("bg/icon.png");
+		}
+  </style>
+ </head>
+ <body>
+	<ul class="list1">
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+	</ul>
+
+	<ul class="list2">
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+	</ul>
+
+	<div></div>
+	<div></div>
+ </body>
+</html>

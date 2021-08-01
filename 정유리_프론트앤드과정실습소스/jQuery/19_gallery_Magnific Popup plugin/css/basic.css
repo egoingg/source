@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/*기본*/
+* { margin:0; padding:0; box-sizing: border-box; }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:0; }
+
+body { font-family:Tahoma,"맑은 고딕",Arial,sans-serif; font-size:16px; background:tan; }
+
+/*header*/
+header{background:#fff;}
+header h1{ width:960; margin:auto; height:80px; line-height:80px;}	
+
+/*sort menu*/
+nav { text-align: center; margin-bottom: 50px;}
+.menu {}
+.menu li { display: inline-block;  }
+.menu a {display: block; height: 50px; color:#fff; 
+        line-height: 50px; padding: 0 50px; border:1px solid #a59e9e; opacity: 0.5;} 
+.menu a:hover, .menu a.on { background: red; opacity: 1;} /* color class = on */
+
+/*gallary*/
+#page_main{background:#555; padding: 100px 0;}
+.inner {width: 1240px; margin: auto; overflow: hidden}
+.inner p {position: relative; margin-bottom: 30px; float: left; width:300px; height: 300px; margin-right: 10px; overflow: hidden;}
+
+.inner p strong { position: absolute;  width: 100%;  bottom: 0; left:0;  
+                background: rgba(0,0,0,0.7); padding: 15px; color: #fff; z-index: 5;}
+.inner p strong i {display: block; font-style: normal; font-size: small; opacity: 0.5; font-weight: normal; margin-top: 5px;}
+.inner span {opacity: 0; /* 안보이게 설정해 놓음 opacity: 0 */
+            position: absolute; top:0; bottom: 0; left: 0; right: 0; 
+            background: rgba(0,0,0,0.5); box-shadow: inset 0 0 20px rgba(20,10,0,1), inset 0 0 40px rgba(204,166,61,1) ;}
+
+/*footer*/
+footer{width:960; margin:auto;padding-top:20px;
+		text-align:right}
+footer small{}
+p.first strong {opacity: 0; } /* 안보이게 설정해 놓음 opacity: 0 */
+p.second  strong { left:-300px; }
+p.third strong {bottom:-80px; }
+p.third  img {position: absolute; top: 0; }
+p.forth  strong { width:60%; left:-60%; top:0; bottom: 0;  padding: 100px 30px }

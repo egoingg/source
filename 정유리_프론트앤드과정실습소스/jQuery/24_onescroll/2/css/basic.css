@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/*기본*/
+* { margin:0; padding:0;  }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:0; }
+ul::after{ display: block; content: ''; clear:both;}
+
+body { font-family:; font-size:; }
+
+
+
+header {position: fixed;
+        left:0; top:0; 
+        width: 100%; 
+        height: 80px; 
+        background: rgb(255, 255, 255,0.7);
+}
+header h1 {position: absolute;
+            left:50%; top:15px; 
+            margin-left: -500px; 
+            color:#fff; 
+            border:1px solid black; 
+}
+header .nav {position: absolute; 
+            right:50%; 
+            margin-right: -500px; 
+            border:1px solid black;
+}
+header .nav li { float: left;}
+header .nav a { display: block; 
+                padding: 0 15px; 
+                line-height: 80px; 
+                color: #000; }
+header .nav a:hover { background: #fff;}
+
+header .nav li.on a { background: pink;}
+
+
+section { height: 550px; padding: 100px;} /*총 높이 700px */
+#s1 {background:rgb(226, 109, 0);}
+#s2 {background:blue;}
+#s3 {background:rgb(140, 210, 146);}
+#s4 {background: rgb(156, 97, 131);;}
+#s5 {background: rgb(129, 156, 97);;}
+#s6 {background: rgb(156, 147, 97);;}
+
+footer { height:50px; 
+        line-height :50px; 
+        background:  #292929; 
+        text-align: center;
+ }
+
+ footer a{color: #ddd; }
+
+ /* btn_box */
+ #btn_box {  position: fixed; 
+                right: 30px;  top:40%;
+                border:1px solid black;}
+ #btn_box li{  margin-bottom: 10px;}
+ #btn_box a { display: block; 
+                width: 20px; height: 20px;
+                border: 1px solid #000000;
+                background: rgb(0, 0, 0,0.3); 
+                border-radius: 50%;
+                text-indent: -9999px;
+        }
+ #btn_box li.on a{ background:#000000; }
+
+ /* <div id="btn_box">
+ <ul>
+    <li class="on"><a href="#" class="btnBox1">1</a></li>            
+    <li><a href="#" class="btnBox2">2</a></li>
+    <li><a href="#" class="btnBox3">3</a></li>
+    <li><a href="#" class="btnBox4">4</a></li>
+    <li><a href="#" class="btnBox5">5</a></li>
+    <li><a href="#" class="btnBox6">6</a></li>   
+ </ul>
+</div> */

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>비교연산자, 논리 연산자</title>
+ </head>
+ <script>
+ var com1 = 5>2;
+ document.write( com1 + "<br>");
+
+ var com2 = 5<2;
+ document.write( com2 + "<br>");
+
+ var com3 = 5==2;
+ document.write( com3+ "<br>");
+
+
+  var com4 = 5==="5"; //자료형 까지 비교(숫자열)
+ document.write( com4+ "<br>");
+
+ document.write( typeof 5 +"/ "+typeof "5"+ "<br>");
+
+ var com5 = 5!=2;
+ document.write( com5+ "<br><hr>");
+
+ var log1, log2, log3;
+ log1 = 5>2 && 3>2; //(and) 
+  document.write( log1+ "<br>");
+
+ log1 = 5>2 && 3<2; //(and) 
+  document.write( log1+ "<br>");
+
+ log1 = 5>2 || 3<2; //(or) 하나먼 조건 맞으면 true
+ document.write( log1+ "<br>");
+
+  log1 = 5<2 || 3<2; //(or) 하나먼 조건 맞으면 true
+ document.write( log1+ "<br>");
+
+  log1 = !(5<2) ; //(not) 결과값이 반대로 표시 (true=>false, false ->true)
+ document.write( log1+ "<br>");
+ </script>
+ <body>
+
+ </body>
+</html>

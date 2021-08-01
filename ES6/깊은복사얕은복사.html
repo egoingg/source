@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a =[]
+        const b ='hello'
+        const c ={}
+
+        const arr = [a, b, c]
+
+        //참조 - 한쪽에서 값변경하면 내것도 변경 되어짐
+        const arrnew = arr
+        
+        arrnew[1] = 'hi'
+        console.log(arrnew[1]) 
+        console.log(arr[1])
+
+        //얕은복사 - 기본형식은 복사되나, 객체자료형은 참조됨
+        const arrnew1 = [...arr]
+
+        arrnew1[0].push(1)
+        arrnew1[1]= 'bye'
+
+        console.log(arrnew1[0]) 
+        console.log(arr[0]) 
+        console.log(arrnew1[1]) 
+        console.log(arr[1]) 
+
+        //깊은복사 - 기본자료형식 과 객체자료형 모두 복사됨
+        const arrnew2 = JSON.parse(JSON.stringify(arr))
+        arrnew2[0].push(2)
+
+        console.log(arrnew2[0]) 
+        console.log(arr[0]) 
+
+    </script>
+    
+</body>
+</html>

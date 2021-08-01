@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>flex</title>
+ </head>
+ <style>
+  #container{ display:flex;
+		width:800px; height:700px; margin:50px auto; }
+    .left{flex:1;background:tan;}
+    .right{flex:3;background:gold;  display:flex; flex-direction:column; }
+      .box1{background:#ccff66;flex:1;}
+	  .box2{background:#cc66cc;flex:1;}
+ </style>
+ <body>
+ <div id="container">
+	<div class="left">
+		LEFT
+	</div>
+	<div class="right">
+		<div class="box1">
+			BOX1
+		</div>
+		<div class="box2">
+	      BOX2
+        </div>
+	</div>
+ </div>
+ </body>
+</html>

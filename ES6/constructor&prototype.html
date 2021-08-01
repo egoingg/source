@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        function 기계(name, age) {
+            this.name =name
+            this.age =age
+            this.sayHi = function () {
+                console.log('안녕 나는 ' + this.name +'이야')
+            }
+        }
+
+        var 학생2 = new 기계( 'Park',  21 )
+        var 학생3 = new 기계( 'Lee', 22 )
+        var 학생1 = new 기계( 'Kim', 20)
+
+        학생1.sayHi()
+        학생2.sayHi()
+        학생3.sayHi()
+
+
+
+        var arr = [1,2,3];
+
+
+        arr.__proto__.remove3 = function () {
+            this.forEach(val => {
+               val === 3 && this.pop(val) 
+            });
+        }
+
+        arr.remove3();
+        console.log(arr); //[1,2]
+
+
+
+        var 부모 = { name : 'Kim', age : 50 };
+        var 자식 = Object.create(부모)
+        자식.age  = 20;
+
+        var 손자 = Object.create(자식);
+
+        console.log(손자.age);
+
+    </script>
+</body>
+</html>

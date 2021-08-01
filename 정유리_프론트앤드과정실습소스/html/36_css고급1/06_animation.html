@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>animation</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <style>
+   * { margin:0; padding:0;}
+   li { list-style:none;}
+   img { width:100%;} /*모든 이미지들은 부모 영역에 맟춰서 100%가 채워진다*/
+
+
+   #wrap {width:1000px ; margin:100px auto; /*border:2px solid red*/}
+   h2 { margin:0 0 20px 20px; }
+
+   .product_list {}
+   .product_list ul { overflow:hidden;  }
+   .product_list li { float:left; width:33.3%; background:white;}
+
+   .product_list .list_item { position:relative;  margin:10px; border:1px solid #bbb;
+								overflow:hidden}
+   .list_item .label{ position:absolute; top:10px;width:100%;
+						text-align:center; /*border:2px solid red;*/ }
+
+   .label span{display:inline-block; text-align:center;
+					width:50px; height:50px;line-height:50px;
+					border-radius:50%; color:white}
+   .label span.new {background:plum;}
+   .label span.sale {background:tomato;}
+   .label span.hot {background:red;}
+
+   .list_item dl{ background:#ddd; padding:10px; }
+   .list_item dl dt { font-weight:bold;font-size:15px; margin-bottom:5px}
+   .list_item dl dd {font-size:13px;color:#404040; margin-left:0}
+   .list_item dl dd:nth-of-type(2) {color:red}
+
+	.list_item .over { position:absolute; top:0; left:-100%; width:100%; height:100%;						transition:0.5s;									
+						background:rgba(0,0,0,0.5)}
+
+	.list_item .over i { position:absolute; left:50%;top:50%; font-size:70px; 
+						transform:translate(-50%,-50%); /*위치이동 나의(아이콘) 크기 반만큼 x축(왼쪽 -),  y축(위로 -) 이동 시킴 */
+	color:white}
+
+
+    .list_item:hover .over{ left:0}
+
+	.list_item img{transition:0.3s;}
+	.list_item:hover img{ transform:scale(1.4) rotate(360deg); }
+
+  </style>
+ </head>
+ <body>
+ <div id="wrap">
+	<h2>Nike kids shoes</h2>
+	<div class="product_list">
+		<ul>
+			<li>
+				<div class="list_item">
+					<div class="label">
+						<span class="new">New</span>
+					</div>
+					<img src="img/boys1.png" alt="신발1">
+					<dl>
+						<dt>나이키 다이나모 프리</dt>
+						<dd>베이비 신발</dd>
+						<dd>59,000원</dd>
+					</dl>
+					<div class="over">
+						<a href="https://www.naver.com" target=_blank><i class="fas fa-arrow-circle-right"></i></a>
+					</div>
+				</div>
+			</li>
+			<li>
+
+				<div class="list_item">
+					<div class="label">
+						<span class="sale">Sale</span>
+					</div>
+					<img src="img/boys2.png" alt="신발2">
+					<dl>
+						<dt>나이키 노비스</dt>
+						<dd>베이비 신발</dd>
+						<dd>59,000원</dd>
+					</dl>
+					<div class="over">
+						<i class="fas fa-arrow-circle-right"></i>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="list_item">
+					<div class="label">
+						<span class="new">New</span> <span class="sale">Sale</span> <span class="hot">Hot</span>
+					</div>
+					<img src="img/boys3.png" alt="신발3">
+					<dl>
+						<dt>나이키 베이비 러너스</dt>
+						<dd>베이비 신발</dd>
+						<dd>59,000원</dd>
+					</dl>
+					<div class="over">
+						<i class="fas fa-arrow-circle-right"></i>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+ </div>
+
+ </body>
+</html>

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/*기본*/
+* { margin:0; padding:0; /*box-sizing: border-box;*/ }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:0; }
+
+body { font-family:; font-size:13px; background:#dadada; color:#333;}
+
+#wrap{width:960px; margin:10px auto; background:#fff; padding:10px}
+
+#header{position:relative; height:250px; background:url('../img/header.jpg') right bottom}
+	.title {position:absolute; top:50px; left:40px; }
+	.title h1{ color:#fff; }
+	.title p{ color:#66ccff}
+
+#nav{}
+#nav ul {overflow:hidden;}
+#nav li { float:left; margin:2px 1px 0 0;}
+#nav a { display:block; background:#ddd; padding:5px 25px; color:#636363}
+#nav a:hover {background:#4e4e4e; color:#fff}
+#nav li:last-child {margin-right:0;}
+#nav li:last-child a {padding:5px 29px 5px 30px;}
+
+
+#contents{ overflow:hidden; padding:40px 0;}
+	article { float:left; width:31%; margin-right:3.5%; }
+	article:nth-of-type(3){margin-right:0;}
+	article h2{ color:#B20A07; border-bottom:1px solid #B20A07}
+	article > p{margin:10px 0; line-height:1.5em;}
+	article .more {text-align:right; border-top:1px solid #B20A07}
+	article .more a {color:#B20A07;}
+
+#banner{ width:960px; margin:10px auto;  background:#fff; padding:20px 10px; }
+
+#footer{ overflow:hidden; width:960px; margin:10px auto; }
+#footer address{float:left;}
+#footer h3{float:right;}
+

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>반응형6</title>
+  <link rel="stylesheet" href="css/basic.css">
+  <style>
+  	/*모바일 상태가 기본*/
+	div {line-height:1.5em; }
+	#wrap{}
+	#header{}
+			h1{line-height:2em; }
+			#nav{text-align:center; background:#ccc;}
+			#nav ul{display:inline-block; overflow:hidden;}
+			#nav li{float:left; margin:0.5em 1.6em;}
+
+
+	/*640px 보다 작을때 - 모바일 상태*/
+	@media (max-width:640px) {
+		#nav{display:none;}
+	}
+
+	/*640px 보다 컸을때 - 타블릿 상태*/
+	@media (min-width:641px) {
+		#content{}
+		#aside{float:left; width:150px;}
+		#section{ margin-left:180px;}
+	}
+
+	/*1024px 보다 컸을때 - 타블릿 상태*/
+	@media (min-width:1024px) {
+		#wrap{width:1024px; margin:auto;}
+
+	}
+
+	#content
+		#aside{}
+		#section{}
+
+	#footer{}
+
+
+  </style>
+ </head>
+ <body>
+	<div id="wrap">
+		<div id="header">
+			<h1>Responsive Layout</h1>
+			<div id="nav">
+				<ul>
+					<li>MENU1</li> <!-- ul>li{Menu$}>a[herf="#"]*6  -->
+					<li>MENU2</li>
+					<li>Menu3</li>
+					<li>Menu4</li>
+					<li>Menu5</li>
+					<li>Menu6</li>
+				</ul>				
+			</div>
+		</div>
+
+		<div id="content">
+			<div id="aside">
+				<ul>
+					<li>side Menu1</li> <!-- ul>li{Menu$}>a[herf="#"]*6  -->
+					<li>side Menu2</li>
+					<li>side Menu3</li>
+					<li>side Menu4</li>
+					<li>side Menu5</li>
+					<li>side Menu6</li>
+				</ul>
+			</div><!-- aside End  -->
+
+			<div id="section">
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur libero augue, et consequat tellus vestibulum vitae. Nullam fringilla venenatis magna eu ullamcorper. Vivamus commodo, purus id mollis viverra, ipsum nibh venenatis mauris, nec ullamcorper massa lacus vel est. Mauris vehicula lobortis tortor, nec vehicula risus laoreet at. Nam lobortis felis at ultrices finibus. Aenean dapibus mi ut mi posuere, tincidunt imperdiet ex pulvinar. Sed imperdiet ligula et nisl sollicitudin, sed viverra libero facilisis. Fusce leo lectus, vulputate sed nisi eu, pretium aliquam arcu. Nam hendrerit faucibus hendrerit. Nullam posuere risus quis arcu commodo congue. Praesent vel feugiat odio, sit amet porttitor nulla. Sed vehicula consequat lorem, vitae rhoncus mi mattis sit amet. Donec varius, sapien vel porttitor lacinia, lectus ante congue augue, quis lacinia nisl dui imperdiet mi.</p>
+
+				<p>Praesent mollis mi at orci porta, quis hendrerit mi pellentesque. Aliquam vel sem rutrum, feugiat felis non, scelerisque dolor. Proin interdum congue turpis. Suspendisse ut ligula imperdiet, mattis quam sed, finibus dolor. Morbi tincidunt eros non lectus vulputate, vitae commodo risus dapibus. Fusce dignissim nec ipsum vel tempor. Phasellus sed orci dui. Vivamus consequat magna non augue vulputate lacinia.</p>
+
+				<p>Sed iaculis sagittis dolor, vel ullamcorper ante feugiat quis. Ut dictum varius enim faucibus semper. Morbi dictum tortor ac condimentum commodo. Pellentesque varius, ex in rhoncus porttitor, quam turpis tempus ante, a tempor urna lectus et urna. Aliquam vel efficitur nisl. Ut a mattis nulla, in mattis nibh. Praesent eu tincidunt velit. Ut maximus venenatis accumsan. Aenean finibus, tortor nec pharetra feugiat, est sem molestie arcu, a finibus massa risus ut orci. Curabitur ex tortor, suscipit ut sapien vel, pulvinar pulvinar velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat semper ante, aliquam vestibulum mi feugiat ac. Proin in mattis orci. Donec odio neque, facilisis id tincidunt quis, volutpat at sem. Vivamus ullamcorper id elit nec sodales.</p>
+			</div><!-- section End  -->
+		</div><!-- content End  -->
+		
+		<div id="footer">
+			&copy; Design by Yooree
+		</div>
+	</div>
+ </body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>css</title>
+  <style>
+  /*태그 선택자 -css에시 사용하는 주석*/
+  h1{
+	color:blue;
+	}
+  p{
+	font-family:Tahoma,Arial;sans-serif; 
+	line-height:155%
+	}
+  li{
+	list-style:none;
+	}
+  img{
+	border:2px solid black;
+	}
+  /*클래스 선택자 -css에시 사용하는 주석*/
+  .pink{
+	color:pink; 
+	font-weight:bold;
+	}
+
+  /*id 선택자 -헌페이지에 한번 사용*/
+  #wrap{
+	width:800px;
+	margin:auto;
+	}
+  #last{
+	/*border:5px dotted purple; */
+	border-width:5px;
+	border-style:dotted;
+	border-color:purple;
+
+	padding:50px;
+	}
+  </style>
+ </head>
+ <body>
+ <div id="wrap">
+	<h1>Lorem ipsum dolor sit amet</h1>
+
+	<p>Lorem ipsum dolor sit amet, <span style="text-decoration:line-through;">consectetursadipiscing elit.</span> Sed cursus dignissim nulla et dapibus. Phasellus ut aliquam ex. Nullam non mollis nulla. Nunc lacinia elementum nunc, vitae dapibus lectus maximus sed. Mauris lorem urna, mattis ut dictum id, pulvinar eget mauris. Nunc sit amet consectetur erat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ultricies purus cursus porta posuere.
+	</p>
+
+	<p>
+	<img src="https://via.placeholder.com/300x200/666666/FFFFFF/?text=css practice">
+	Vivamus efficitur lacus et nunc semper tincidunt. Phasellus vulputate urna quam, ac lacinia urna gravida nec. In egestas, leo eget aliquet malesuada, libero magna finibus nibh, pharetra venenatis quam est eu magna. Pellentesque dictum aliquet metus, et gravida ligula sagittis bibendum. Duis imperdiet aliquet tristique. Mauris a magna vel lectus viverra ullamcorper pharetra id urna. Duis cursus fringilla nibh vitae lobortis. Curabitur fermentum varius purus et varius. Aliquam gravida massa eget elit sodales efficitur.
+	</p>
+<!--목록 시작 -->
+	<h2 class="pink">LIST</h2>
+	<ul>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li class="pink">Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Lorem ipsum dolor sit amet</li>
+	</ul>
+<!--목록 끝-->
+	<p id="last">
+	<img src="https://via.placeholder.com/200x100/999999/000000/?text=css practice">
+	Morbi venenatis odio sit amet lorem aliquam laoreet. Morbi lacus quam, aliquam sit amet varius non, malesuada eu turpis. Praesent dignissim nisi at erat pulvinar, quis iaculis mauris imperdiet. Cras vulputate maximus faucibus. Sed semper interdum libero, in feugiat dolor. Vestibulum ut eros lacinia massa iaculis fringilla. Donec volutpat odio in diam ultricies, vel fringilla velit volutpat. <span class="pink">Fusce quis diam sapien. Cras a faucibus augue. Duis vel viverra lacus.</span>Ut in sollicitudin augue. Maecenas auctor, lectus vel tristique porta, arcu odio laoreet dolor, vitae pretium augue nisl non sapien. Praesent pharetra mi turpis, eget porttitor lectus volutpat id.
+	</p>
+	<h1>=================end===============</h1>
+ </div>
+ </body>
+</html>

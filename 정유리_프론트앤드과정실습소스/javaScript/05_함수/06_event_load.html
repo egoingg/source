@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>HTML Event Handler</title>
+  <link rel="stylesheet" href="assert/basic.css">
+
+ </head>
+ <body>
+	<div id="page">
+		<h1>Event load</h1>
+		<form action="">
+			<div id="feedback"></div>
+			<label for="username">사용자이름:</label>
+			<input type="text" id="username">
+			<label for="pw">비밀번호:</label>
+			<input type="password" id="pw">
+			<input type="submit" value="LOG IN">
+		</form>
+	</div>
+
+  <script>
+	function aaa(){
+		var txtIn = document.getElementById("username");
+		txtIn.focus();
+	}
+	addEventListener('load',aaa,false);
+  </script>
+ </body>
+</html>

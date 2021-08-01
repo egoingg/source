@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>HTML Event Handler</title>
+  <link rel="stylesheet" href="assert/basic.css">
+	<style>
+		#feedback.tt { background-image:url('assert/tip.png'); } /*기존 #feedbackd에 있는 이미지를 바꺼준다*/
+	</style>
+ </head>
+ <body>
+	<div id="page">
+		<h1>Event load</h1>
+		<form action="">
+			<div id="feedback"></div>
+			<label for="username">사용자이름:</label>
+			<input type="text" id="username">
+			<label for="pw">비밀번호:</label>
+			<input type="password" id="pw">
+			<input type="submit" value="LOG IN">
+		</form>
+	</div>
+
+  <script>
+	var elName = document.getElementById("username");
+	var elMsg = document.getElementById("feedback");
+	function tip(){
+
+		elMsg.className = 'tt'; //css 샐항
+		elMsg.innerHTML ="<u>7글자이상 입력하시요</u>";
+	}
+	elName.addEventListener('focus',tip,false);
+  </script>
+ </body>
+</html>

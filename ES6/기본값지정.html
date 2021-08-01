@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const test = function(name, color, status= '이상없음'){
+            return `${name}:${color}:${status}`
+        }
+        console.log(test('구름이','갈색'))
+
+        //-----
+        const dog = {name:'구름이',color:'갈색'}
+
+        const 구름 = {status:'이상없음', ...dog} //...은 전개 연산자
+        console.log(구름)
+
+
+        //----------
+        const tt = function ({name, color, status = '이상없음'}) {
+            return `${name}:${color}:${status}` 
+        }
+        console.log(tt({name:'초롱', color:'흰색'}))
+
+       //----------
+       const ttt = function (obj) {
+           const {name, color, status} = { status:'건강함',...obj} 
+           return `${name}:${color}:${status}` 
+        }
+        console.log(ttt({name:'초롱', color:'흰색'}))
+    </script>
+</body>
+</html>

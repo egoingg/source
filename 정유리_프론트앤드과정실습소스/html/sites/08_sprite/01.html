@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Sprite</title>
+  <style>
+  #check {margin:100px; background:gray}
+	#check > div {width:54px; height:30px; border:1px solid red; margin:30px;
+			background:url('logo.gif')0 0;}
+
+	#check > div:first-child{ background-position:0 0; }
+	#check > div:nth-child(2){ background-position:0 -31px;}
+
+	ul{}
+	ul li{ float:left; list-style:none; text-align:center; width:100px; border:1px solid pink;
+	}
+	ul li p{ width:68px; height:68px; background:url('img/css_sprites.png') no-repeat; background-size:156px;border:1px solid gray; margin:20px auto;}
+
+	ul li:nth-child(1) p{background-position: -5px  -5px;}
+	ul li:nth-child(2) p{background-position: -83px -5px;}
+	ul li:nth-child(3) p{background-position: -5px  -83px;}
+	ul li:nth-child(4) p{background-position: -83px -83px;}
+
+
+
+	ul li span{}
+  </style>
+ </head>
+ <body>
+	 <div id="check">
+		<div></div>
+		<div></div>
+	 </div>
+	
+	<ul>
+		<li>
+			<p></p>
+			<span>스마일클럽</span>
+		</li>
+		<li>
+			<p></p>
+			<span>스마일카드</span>
+		</li>
+		<li>
+			<p></p>
+			<span>스마일배송</span>
+		</li>
+		<li>
+			<p></p>
+			<span>스마일박스</span>
+		</li>
+	</ul>
+
+ </body>
+</html>

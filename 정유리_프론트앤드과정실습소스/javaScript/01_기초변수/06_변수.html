@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>문자열, 따옴표, 링크</title>
+ </head>
+ <style>
+  body { background:#0033cc}
+  div { background:#ccffcc; width:500px; margin:200px; text-align:center;
+  padding:20px}
+
+  #first{ font-size:20px; padding-top:20px}
+  #second{background:#0033cc; color:white; line-height:40px}
+  #third{color:#0033cc; font-weight:bold}
+ </style>
+ <body>
+	<div>
+		<h1>자바스크립트 연습</h1>
+		<p id ="first">fist 내용</p>
+		<p id ="second">second 내용</p>
+		<p id ="third">third 내용</p>
+	</div>
+	
+	<script>
+	 var name= "전지현";
+	 var msg ="자바스크립트 강의 첫날입니다.!!";
+	 var link = "<a href =\"https://naver.com/\">네이버</a>"
+	 //따옴표를 겹쳐시 써야 할때 안쪽 따옴표 앞에 \를 붙여준디 (이스케이프 시퀀스)
+
+	 //'\n' 이스케이프 시퀀스 (상태를 바꾸는데 쓰이는 문자열)<canvas id="<audio controls>
+		<source src="" type="audio/mpeg">
+	 </audio>"></canvas>
+	 //alert(name + '\n'+ msg); // (+) 연산자는 문자열을 연결
+
+	 var elName = document.getElementById("first");
+	 console.log(elName);
+	/*
+	document		- 전체 웹페이지(객체)
+	.				- document가 가지고 있는 메서드, 속성들을 연결(멤버 접근 연산자)
+	getElementByid	- id 속성을 이용해서 엘리먼트가져오기(메서드)
+
+	*/
+	
+    elName.textContent = name;
+	//A.textCon - A안에 내용을 삽입
+
+	var elMsg = document.getElementById("second");
+	console.log(elMsg);
+	elMsg.textContent = msg;
+
+	var elink = document.getElementById("third");
+	console.log(elink);
+	elink.innerHTML = link;
+
+	//A.innerHTML =  A안에 
+	</script>
+ </body>
+</html>

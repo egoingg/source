@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>내장객체-생성</title>
+ <script>
+
+   var tv = new Object();
+   tv.color ="red";
+   tv.price = 300000;
+   tv.info = function(){
+						document.write("tv.color:" + this.color + "<br>");
+						document.write("tv.price:" + this.price + "<br>");
+   }
+
+	tv.info(); 
+
+	var car = {
+		  size : "big",
+		  inn : "5",
+		  info : function(){
+							document.write("car.size:" + this.size + "<br>");
+							document.write("car.inin:" + this.inin + "<br>");   
+		}
+	};
+
+	car.info();
+  </script>
+ </head>
+ <body>
+
+ </body>
+</html>
